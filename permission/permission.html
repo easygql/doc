@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>九、权限控制 | EasyGQL Documentation</title>
+    <meta name="description" content="EasyGQL 文档">
+    <link rel="icon" href="/doc/img/favicon.ico">
+    
+    <link rel="preload" href="/doc/assets/css/0.styles.118d8de7.css" as="style"><link rel="preload" href="/doc/assets/js/app.f3bf134f.js" as="script"><link rel="preload" href="/doc/assets/js/2.a45c03ed.js" as="script"><link rel="preload" href="/doc/assets/js/11.4d9f786d.js" as="script"><link rel="prefetch" href="/doc/assets/js/10.9b9ea863.js"><link rel="prefetch" href="/doc/assets/js/12.b0c4e780.js"><link rel="prefetch" href="/doc/assets/js/13.8d76362a.js"><link rel="prefetch" href="/doc/assets/js/14.290c55a0.js"><link rel="prefetch" href="/doc/assets/js/15.86827816.js"><link rel="prefetch" href="/doc/assets/js/16.149ceef7.js"><link rel="prefetch" href="/doc/assets/js/17.48bb69a1.js"><link rel="prefetch" href="/doc/assets/js/3.44c1ede8.js"><link rel="prefetch" href="/doc/assets/js/4.857e915e.js"><link rel="prefetch" href="/doc/assets/js/5.ecd72f34.js"><link rel="prefetch" href="/doc/assets/js/6.586d9a55.js"><link rel="prefetch" href="/doc/assets/js/7.93aac932.js"><link rel="prefetch" href="/doc/assets/js/8.c6ca49df.js"><link rel="prefetch" href="/doc/assets/js/9.60fd8290.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.118d8de7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc/" class="home-link router-link-active"><!----> <span class="site-name">EasyGQL Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc/" class="sidebar-link">一、介绍</a></li><li><a href="/doc/scalars/scalars.html" class="sidebar-link">二、标量类型</a></li><li><a href="/doc/object/object.html" class="sidebar-link">三、自定义对象</a></li><li><a href="/doc/annotation/annotation.html" class="sidebar-link">四、注解</a></li><li><a href="/doc/schemamanage/schemamanage.html" class="sidebar-link">五、schema管理</a></li><li><a href="/doc/restapi/restfulapi.html" class="sidebar-link">六、Restful接口</a></li><li><a href="/doc/websocketapi/websocketapi.html" class="sidebar-link">七、WebSocket接口</a></li><li><a href="/doc/trigger/trigger.html" class="sidebar-link">八、触发器</a></li><li><a href="/doc/permission/permission.html" class="active sidebar-link">九、权限控制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc/permission/permission.html#_9-1权限控制流程" class="sidebar-link">9.1权限控制流程</a></li><li class="sidebar-sub-header"><a href="/doc/permission/permission.html#_9-2-权限控制模型" class="sidebar-link">9.2 权限控制模型</a></li><li class="sidebar-sub-header"><a href="/doc/permission/permission.html#_9-3-针对不同的api设置不同的数据访问权限" class="sidebar-link">9.3 针对不同的API设置不同的数据访问权限</a></li><li class="sidebar-sub-header"><a href="/doc/permission/permission.html#_9-4-列级权限控制" class="sidebar-link">9.4 列级权限控制</a></li><li class="sidebar-sub-header"><a href="/doc/permission/permission.html#_9-5-行级权限控制" class="sidebar-link">9.5 行级权限控制</a></li></ul></li><li><a href="/doc/case/case.html" class="sidebar-link">十、案例</a></li><li><a href="/doc/end/end.html" class="sidebar-link">十一、结束</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="九、权限控制"><a href="#九、权限控制" class="header-anchor">#</a> 九、权限控制</h1> <p>EasyGQL可以为开发者提供根据用户不同进行不同行级、列级权限控制的API。</p> <h2 id="_9-1权限控制流程"><a href="#_9-1权限控制流程" class="header-anchor">#</a> 9.1权限控制流程</h2> <p><img src="/doc/img/permission_process.jpg" alt="permission_process"></p> <p>如上图所示，EasyGQL的权限控制是通过权限控制过滤器来事先的，当用户请求数据时，权限过滤器会根据用户当前的基本信息和开发者事先定义好的数据方位控制规则，判断用户是否对该API具有访问权限，以及是否对应的行、列具有访问权限，从而决定是否调用数据库。</p> <ol><li>当用户不具备访问API权限时，用户请求将会被返回一个403错误。</li> <li>当用户具备访问API权限时，用户只能查看或修改经过权限过滤器过滤后的数据。</li></ol> <h2 id="_9-2-权限控制模型"><a href="#_9-2-权限控制模型" class="header-anchor">#</a> 9.2 权限控制模型</h2> <p><img src="/doc/img/permission_class_diagram.jpg" alt="permission_process"></p> <p>如上图所示，Easy的权限控制模型主要是如下关系。</p> <ol><li><p>每一个数据类型和用户角色可以定义不被允许访问的API。</p></li> <li><p>每一个数据类型和用户角色可以针对针对允许访问的API设置数据过滤条件。数据过滤条件氛围：列级和行级权限。</p></li> <li><p>默认情况下，每个用户角色都有所有API的访问权限，以及所有行和所有列的访问权限。</p></li> <li><p>列级数据过滤条件主要是设置用户不允许访问的数据权限。</p></li> <li><p>行级数据过滤条件是根据用户的基本信息设置数据行的过滤条件。</p></li></ol> <h2 id="_9-3-针对不同的api设置不同的数据访问权限"><a href="#_9-3-针对不同的api设置不同的数据访问权限" class="header-anchor">#</a> 9.3 针对不同的API设置不同的数据访问权限</h2> <p>用户可以针对EasyGQL提供的各个API设置不同的数据访问权限。在开发者新建或修改数据类型定义的时候，默认为为每个数据类型提供以下几种API。</p> <table><thead><tr><th>序号</th> <th>API名称</th> <th>用法</th> <th>权限控制种类</th></tr></thead> <tbody><tr><td>1</td> <td>类型名</td> <td>根据ID查询具体某个对象</td> <td>行级+列级权限控制，只能查询指定行、指定列</td></tr> <tr><td>2</td> <td>类型名+”S”</td> <td>根据where条件查询多个对象</td> <td>行级+列级权限控制，只能查询指定行、指定列</td></tr> <tr><td>3</td> <td>类型名+”Create”</td> <td>创建对象</td> <td>列级权限控制，在创建对象时，只能对某些固定的列赋值。</td></tr> <tr><td>4</td> <td>类型名+”Destroy”</td> <td>销毁对象</td> <td>行级权限控制，只能删除指定的行</td></tr> <tr><td>5</td> <td>类型名+”Update”</td> <td>更新对象</td> <td>行级+列级权限控制，只能针对指定行、指定列进行修改。</td></tr> <tr><td>6</td> <td>类型名+”Listener”</td> <td>订阅对象变化</td> <td>行级+列级权限控制，只能针对指定的行、指定的列订阅变化。</td></tr> <tr><td>7</td> <td>字段名+”In”+类型名+”Add”</td> <td>为对象创建内嵌对象</td> <td>行级+列级权限控制，参照update的权限。只能修改指定行，指定列。</td></tr> <tr><td>8</td> <td>字段名+”In”+类型名+”Remove”</td> <td>销毁对象的内勤对象。</td> <td>行级+列级权限控制，参照update的权限。只能修改指定行，指定列。</td></tr></tbody></table> <h2 id="_9-4-列级权限控制"><a href="#_9-4-列级权限控制" class="header-anchor">#</a> 9.4 列级权限控制</h2> <p>EasyGQL默认为所遇API提供所有列的查询和操作权限，在进行列级权限控制时，可以针对每个类型、每个角色、每个API具体禁止操作列的列表。</p> <h2 id="_9-5-行级权限控制"><a href="#_9-5-行级权限控制" class="header-anchor">#</a> 9.5 行级权限控制</h2> <p>行级权限控制是EasyGQL可以根据用户对属性不同，为不同用户提供不同的数据库操作结果集。</p> <p>针对每一个自定义数据类型，系统会自动提供其查询过滤器（数据类型为类型名+”WhereInput”），开发者可以通过设定默认的过滤器参数，实现行级过滤。</p> <p>默认过滤器设置的输入规则总体需要符合对应对象的WhereInput的定义，但是对于叶子节点的参数，不再是EasyGQL默认提供的标量类型，而是以下类型</p> <table><thead><tr><th>字段名</th> <th>取值</th> <th>含义</th></tr></thead> <tbody><tr><td>value</td> <td>对应过滤器叶子节点的值</td> <td>当valuetype为const时，value为对应叶子节点的常量值得json表述。当valuetype为userdata时，value为user的某一个字段名。</td></tr> <tr><td>valuetype</td> <td>“const”、”userdata”</td> <td></td></tr></tbody></table> <p>假设某一个对象定义如下：</p> <div class="language- extra-class"><pre class="language-text"><code>type  chatroom {
+   id :ID
+   content :String
+}
+</code></pre></div><p>对应对象的WhereInput描述为</p> <div class="language-json extra-class"><pre class="language-json"><code>input UserWhereInput <span class="token punctuation">{</span>
+ 	and<span class="token operator">:</span> UserWhereInput 
+field_contains<span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span> 
+filter<span class="token operator">:</span> UserFieldFilter 
+not<span class="token operator">:</span> UserWhereInput 
+or<span class="token operator">:</span> UserWhereInput 
+<span class="token punctuation">}</span>
+input chatroomFieldFilter <span class="token punctuation">{</span> 
+content<span class="token operator">:</span> StringFilter 
+id<span class="token operator">:</span> IDFilter
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>这对应的行级过滤条件可以为：</p> <div class="language- extra-class"><pre class="language-text"><code>{ 
+  “or”:[
+  	{
+ 	“filter”:{
+      “content”:{
+          “eq”:{
+             “valuetype”:”const”,
+             “value”:”test11”
+}
+}
+}
+},
+		{
+ 		“filter”:{
+      	“content”:{
+        	  “eq”:{
+            	 “valuetype”:”userdate”,
+             	 “value”:”role”
+				   }
+				}
+			}
+}
+]
+}
+</code></pre></div><p>表示，可以对content是test11或者content值等于用户的role的所有对象。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/doc/trigger/trigger.html" class="prev">八、触发器</a></span> <span class="next"><a href="/doc/case/case.html">十、案例</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.f3bf134f.js" defer></script><script src="/doc/assets/js/2.a45c03ed.js" defer></script><script src="/doc/assets/js/11.4d9f786d.js" defer></script>
+  </body>
+</html>
