@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>四、枚举类型 | EasyGQL Documentation</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/doc/img/favicon.ico">
+    <meta name="description" content="EasyGQL 文档">
+    <link rel="preload" href="/doc/assets/css/0.styles.ba170dd8.css" as="style"><link rel="preload" href="/doc/assets/js/app.91a4e842.js" as="script"><link rel="preload" href="/doc/assets/js/2.93ca64ef.js" as="script"><link rel="preload" href="/doc/assets/js/13.6cc3442f.js" as="script"><link rel="prefetch" href="/doc/assets/js/10.faa360f4.js"><link rel="prefetch" href="/doc/assets/js/11.f20f5e37.js"><link rel="prefetch" href="/doc/assets/js/12.19f965e2.js"><link rel="prefetch" href="/doc/assets/js/14.cc4d45e9.js"><link rel="prefetch" href="/doc/assets/js/15.25219f22.js"><link rel="prefetch" href="/doc/assets/js/16.1252d517.js"><link rel="prefetch" href="/doc/assets/js/17.1290cb07.js"><link rel="prefetch" href="/doc/assets/js/18.bcef6df6.js"><link rel="prefetch" href="/doc/assets/js/19.bba6b492.js"><link rel="prefetch" href="/doc/assets/js/20.fac43907.js"><link rel="prefetch" href="/doc/assets/js/3.bba5b6bc.js"><link rel="prefetch" href="/doc/assets/js/4.1870bb72.js"><link rel="prefetch" href="/doc/assets/js/5.9a60ef56.js"><link rel="prefetch" href="/doc/assets/js/6.744f3ff3.js"><link rel="prefetch" href="/doc/assets/js/7.19f88e84.js"><link rel="prefetch" href="/doc/assets/js/8.ad87b39b.js"><link rel="prefetch" href="/doc/assets/js/9.c276ff04.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.ba170dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc/" class="home-link router-link-active"><!----> <span class="site-name">EasyGQL Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc/1.introduction/introduction.html" class="sidebar-link">一、介绍</a></li><li><a href="/doc/2.deployment/deployment.html" class="sidebar-link">二、部署</a></li><li><a href="/doc/3.scalar/scalar.html" class="sidebar-link">三、标量</a></li><li><a href="/doc/4.enum_type/enums.html" class="active sidebar-link">四、枚举类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-1-枚举类型" class="sidebar-link">4.1 枚举类型</a></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-2-枚举类型api" class="sidebar-link">4.2 枚举类型API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-2-1-新增" class="sidebar-link">4.2.1 新增</a></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-2-2-修改" class="sidebar-link">4.2.2 修改</a></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-2-3-删除" class="sidebar-link">4.2.3 删除</a></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-2-4-查看" class="sidebar-link">4.2.4 查看</a></li></ul></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-3-枚举类型的使用" class="sidebar-link">4.3 枚举类型的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-3-1-枚举类型字段" class="sidebar-link">4.3.1 枚举类型字段</a></li><li class="sidebar-sub-header"><a href="/doc/4.enum_type/enums.html#_4-3-2-枚举类型字段api" class="sidebar-link">4.3.2 枚举类型字段API</a></li></ul></li></ul></li><li><a href="/doc/5.role_type/role.html" class="sidebar-link">五、角色</a></li><li><a href="/doc/6.object_type/object_type.html" class="sidebar-link">六、对象类型</a></li><li><a href="/doc/7.object_relation/relation.html" class="sidebar-link">七、关联关系</a></li><li><a href="/doc/8.trigger/trigger.html" class="sidebar-link">八、触发器</a></li><li><a href="/doc/9.thirdapi/thirdapi.html" class="sidebar-link">九、自定义API</a></li><li><a href="/doc/10.remote_schema/remote_schema.html" class="sidebar-link">十、外部Schema集成</a></li><li><a href="/doc/11.permission/permission.html" class="sidebar-link">十一、权限控制</a></li><li><a href="/doc/12.database_extend/database_extend.html" class="sidebar-link">十二、多数据库支持</a></li><li><a href="/doc/13.schema_management/schema_management.html" class="sidebar-link">十三、Schema管理</a></li><li><a href="/doc/14.application_demo/application_demo.html" class="sidebar-link">十四、案例</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="四、枚举类型"><a href="#四、枚举类型" class="header-anchor">#</a> 四、枚举类型</h1> <p>本章主要介绍现阶段EasyGQL枚举类型的定义、使用场景、用法.</p> <h2 id="_4-1-枚举类型"><a href="#_4-1-枚举类型" class="header-anchor">#</a> 4.1 枚举类型</h2> <p>枚举场景主要适用于定义一些值域只有固定几个可选值的字段，比如性别、国籍、省份、学历等。
+枚举类型主要通过定义枚举类型元素据以及定义枚举值来完成，其中枚举类型元数据主要有以下属性：</p> <table><thead><tr><th>序号</th> <th>属性</th> <th>含义</th> <th>非空</th> <th>默认值</th></tr></thead> <tbody><tr><td>1</td> <td>ID</td> <td>唯一标识</td> <td>是</td> <td>无</td></tr> <tr><td>2</td> <td>name</td> <td>类型名</td> <td>是</td> <td>无</td></tr> <tr><td>3</td> <td>schema</td> <td>所属Schema</td> <td>是</td> <td>无</td></tr></tbody></table> <p>枚举类型的枚举值主要有以下属性：</p> <table><thead><tr><th>序号</th> <th>属性</th> <th>含义</th> <th>非空</th> <th>默认值</th></tr></thead> <tbody><tr><td>1</td> <td>id</td> <td>唯一标识</td> <td>是</td> <td>无</td></tr> <tr><td>2</td> <td>value</td> <td>值</td> <td>是</td> <td>无</td></tr> <tr><td>3</td> <td>enum</td> <td>所属枚举类型</td> <td>是</td> <td>无</td></tr></tbody></table> <h2 id="_4-2-枚举类型api"><a href="#_4-2-枚举类型api" class="header-anchor">#</a> 4.2 枚举类型API</h2> <h3 id="_4-2-1-新增"><a href="#_4-2-1-新增" class="header-anchor">#</a> 4.2.1 新增</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>input EnumTypeInput  <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  name<span class="token operator">:</span> String<span class="token operator">!</span>
+<span class="token punctuation">}</span>
+type EnumType_InsertResult  <span class="token punctuation">{</span>
+  id_list<span class="token operator">:</span> String
+  nodes<span class="token operator">:</span> <span class="token punctuation">[</span>EnumType<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+type EnumType  <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  name<span class="token operator">:</span> String
+  schemaid<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaObject<span class="token punctuation">]</span>
+  values<span class="token operator">:</span> EnumElement
+<span class="token punctuation">}</span>
+type EnumElement  <span class="token punctuation">{</span>
+  description<span class="token operator">:</span> String
+  enumtype<span class="token operator">:</span> <span class="token punctuation">[</span>EnumType<span class="token punctuation">]</span>
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  value<span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+<span class="token function">enumtypesInSchemaObjectAddInput</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> child_object<span class="token operator">:</span> <span class="token punctuation">[</span>EnumTypeInput<span class="token punctuation">]</span><span class="token punctuation">,</span> conflict<span class="token operator">:</span> CONFLICTEnum <span class="token operator">=</span> replace<span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumType_InsertResult
+<span class="token function">valuesInEnumTypeAddInput</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> child_object<span class="token operator">:</span> <span class="token punctuation">[</span>EnumElementInput<span class="token punctuation">]</span><span class="token punctuation">,</span> conflict<span class="token operator">:</span> CONFLICTEnum <span class="token operator">=</span> replace<span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumElement_InsertResult
+</code></pre></div><h3 id="_4-2-2-修改"><a href="#_4-2-2-修改" class="header-anchor">#</a> 4.2.2 修改</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">EnumTypeUpdate</span><span class="token punctuation">(</span>object<span class="token operator">:</span> EnumTypeUpdateInput<span class="token operator">!</span><span class="token punctuation">,</span> where<span class="token operator">:</span> EnumTypeWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> EnumType_UpdateResult
+<span class="token function">valuesInEnumTypeAddInput</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> child_object<span class="token operator">:</span> <span class="token punctuation">[</span>EnumElementInput<span class="token punctuation">]</span><span class="token punctuation">,</span> conflict<span class="token operator">:</span> CONFLICTEnum <span class="token operator">=</span> replace<span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumElement_InsertResult
+</code></pre></div><h3 id="_4-2-3-删除"><a href="#_4-2-3-删除" class="header-anchor">#</a> 4.2.3 删除</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">valuesInEnumTypeRemove</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumElement_DeleteResult
+<span class="token function">enumtypesInSchemaObjectRemove</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumType_DeleteResult
+</code></pre></div><h3 id="_4-2-4-查看"><a href="#_4-2-4-查看" class="header-anchor">#</a> 4.2.4 查看</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>type Schema  <span class="token punctuation">{</span>
+  current_schema<span class="token operator">:</span> SchemaObject
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  published_history<span class="token operator">:</span> SchemaMetaData
+  published_schema<span class="token operator">:</span> SchemaMetaData
+  status<span class="token operator">:</span> SchemaStatus
+<span class="token punctuation">}</span>
+type SchemaObject <span class="token punctuation">{</span>
+  databasekind<span class="token operator">:</span> DatabaseKind
+  datasource<span class="token operator">:</span> DataSource
+  enumtypes<span class="token operator">:</span> EnumType
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  name<span class="token operator">:</span> String
+  objecttypes<span class="token operator">:</span> ContentType
+  schema<span class="token operator">:</span> Schema
+  thirdapis<span class="token operator">:</span> ThirdAPI
+<span class="token punctuation">}</span>
+
+type SchemaMetaData  <span class="token punctuation">{</span>
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  published_schema<span class="token operator">:</span> Schema
+  schemaid<span class="token operator">:</span> <span class="token punctuation">[</span>Schema<span class="token punctuation">]</span>
+  schemaobject<span class="token operator">:</span> Object
+  versionid<span class="token operator">:</span> String
+<span class="token punctuation">}</span>
+input SchemaWhereInput <span class="token punctuation">{</span>
+  and<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaWhereInput<span class="token punctuation">]</span>
+  field_contains<span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
+  filter<span class="token operator">:</span> SchemaFieldFilter
+  not<span class="token operator">:</span> SchemaWhereInput
+  or<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaWhereInput<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+input SchemaFieldFilter <span class="token punctuation">{</span>
+  current_schema<span class="token operator">:</span> SchemaObjectFieldFilter
+  id<span class="token operator">:</span> IDFilter
+  published_history<span class="token operator">:</span> SchemaMetaDataListMatch
+  published_schema<span class="token operator">:</span> SchemaMetaDataFieldFilter
+<span class="token punctuation">}</span>
+input SchemaMetaDataWhereInput <span class="token punctuation">{</span>
+  and<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaMetaDataWhereInput<span class="token punctuation">]</span>
+  field_contains<span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
+  filter<span class="token operator">:</span> SchemaMetaDataFieldFilter
+  not<span class="token operator">:</span> SchemaMetaDataWhereInput
+  or<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaMetaDataWhereInput<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+input SchemaObjectFieldFilter <span class="token punctuation">{</span>
+  current_schema<span class="token operator">:</span> SchemaObjectFieldFilter
+  datasource<span class="token operator">:</span> DataSourceFieldFilter
+  enumtypes<span class="token operator">:</span> EnumTypeListMatch
+  id<span class="token operator">:</span> IDFilter
+  name<span class="token operator">:</span> StringFilter
+  objecttypes<span class="token operator">:</span> ContentTypeListMatch
+  thirdapis<span class="token operator">:</span> ThirdAPIListMatch
+<span class="token punctuation">}</span>
+input SchemaObjectWhereInput
+  and<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaObjectWhereInput<span class="token punctuation">]</span>
+  field_contains<span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
+  filter<span class="token operator">:</span> SchemaObjectFieldFilter
+  not<span class="token operator">:</span> SchemaObjectWhereInput
+  or<span class="token operator">:</span> <span class="token punctuation">[</span>SchemaObjectWhereInput<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+input SchemaObjectFieldFilter <span class="token punctuation">{</span>
+  current_schema<span class="token operator">:</span> SchemaObjectFieldFilter
+  datasource<span class="token operator">:</span> DataSourceFieldFilter
+  enumtypes<span class="token operator">:</span> EnumTypeListMatch
+  id<span class="token operator">:</span> IDFilter
+  name<span class="token operator">:</span> StringFilter
+  objecttypes<span class="token operator">:</span> ContentTypeListMatch
+  thirdapis<span class="token operator">:</span> ThirdAPIListMatch
+<span class="token punctuation">}</span>
+  <span class="token function">Schema</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> Schema
+  <span class="token function">SchemaMany</span><span class="token punctuation">(</span>where<span class="token operator">:</span> SchemaWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span>Schema<span class="token punctuation">]</span>
+  <span class="token function">SchemaMetaData</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> SchemaMetaData
+  <span class="token function">SchemaMetaDataMany</span><span class="token punctuation">(</span>where<span class="token operator">:</span> SchemaMetaDataWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span>SchemaMetaData<span class="token punctuation">]</span>
+  <span class="token function">SchemaObject</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> SchemaObject
+  <span class="token function">SchemaObjectMany</span><span class="token punctuation">(</span>where<span class="token operator">:</span> SchemaObjectWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span>SchemaObject<span class="token punctuation">]</span>
+</code></pre></div><h2 id="_4-3-枚举类型的使用"><a href="#_4-3-枚举类型的使用" class="header-anchor">#</a> 4.3 枚举类型的使用</h2> <h3 id="_4-3-1-枚举类型字段"><a href="#_4-3-1-枚举类型字段" class="header-anchor">#</a> 4.3.1 枚举类型字段</h3> <p>一个枚举类型字段主要有以下属性：</p> <table><thead><tr><th style="text-align:left;">序号</th> <th style="text-align:left;">属性名</th> <th style="text-align:left;">含义</th> <th style="text-align:left;">默认值</th> <th style="text-align:left;">是否非空</th></tr></thead> <tbody><tr><td style="text-align:left;">1</td> <td style="text-align:left;">id</td> <td style="text-align:left;">字段的唯一标识</td> <td style="text-align:left;">系统会自动赋予每个新增字段一个唯一标识</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">2</td> <td style="text-align:left;">name</td> <td style="text-align:left;">字段的名称</td> <td style="text-align:left;">无</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">3</td> <td style="text-align:left;">type</td> <td style="text-align:left;">字段的类型</td> <td style="text-align:left;">无</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">4</td> <td style="text-align:left;">islist</td> <td style="text-align:left;">是否为列表</td> <td style="text-align:left;">否</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">5</td> <td style="text-align:left;">notnull</td> <td style="text-align:left;">字段是否非空</td> <td style="text-align:left;">否</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">6</td> <td style="text-align:left;">invisible_role</td> <td style="text-align:left;">不可查看的角色列表</td> <td style="text-align:left;">空List</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">7</td> <td style="text-align:left;">unmodifiable_role</td> <td style="text-align:left;">不可查看的角色列表</td> <td style="text-align:left;">空List</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">8</td> <td style="text-align:left;">description</td> <td style="text-align:left;">描述</td> <td style="text-align:left;">&quot;&quot;</td> <td style="text-align:left;">可空</td></tr> <tr><td style="text-align:left;">9</td> <td style="text-align:left;">defaultvalue</td> <td style="text-align:left;">默认值</td> <td style="text-align:left;"></td> <td style="text-align:left;">可空</td></tr></tbody></table> <h3 id="_4-3-2-枚举类型字段api"><a href="#_4-3-2-枚举类型字段api" class="header-anchor">#</a> 4.3.2 枚举类型字段API</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>input EnumFieldInput  <span class="token punctuation">{</span>
+  defaultvalue<span class="token operator">:</span> Object
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  invisible_roles<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>Role<span class="token punctuation">]</span><span class="token punctuation">]</span>
+  irrevisible_roles<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>Role<span class="token punctuation">]</span><span class="token punctuation">]</span>
+  islist<span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">false</span>
+  name<span class="token operator">:</span> String<span class="token operator">!</span>
+  type<span class="token operator">:</span> String<span class="token operator">!</span>
+<span class="token punctuation">}</span>
+<span class="token function">enumfieldsInContentTypeAddInput</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> child_object<span class="token operator">:</span> <span class="token punctuation">[</span>EnumFieldInput<span class="token punctuation">]</span><span class="token punctuation">,</span> conflict<span class="token operator">:</span> CONFLICTEnum <span class="token operator">=</span> replace<span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumField_InsertResult
+<span class="token function">enumfieldsInContentTypeRemove</span><span class="token punctuation">(</span>child_Id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token punctuation">,</span> parent_Id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> EnumField_DeleteResult
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/doc/3.scalar/scalar.html" class="prev">
+        三、标量
+      </a></span> <span class="next"><a href="/doc/5.role_type/role.html">
+        五、角色
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.91a4e842.js" defer></script><script src="/doc/assets/js/2.93ca64ef.js" defer></script><script src="/doc/assets/js/13.6cc3442f.js" defer></script>
+  </body>
+</html>
