@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>六、对象类型 | EasyGQL Documentation</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/doc/img/favicon.ico">
+    <meta name="description" content="EasyGQL 文档">
+    <link rel="preload" href="/doc/assets/css/0.styles.ba170dd8.css" as="style"><link rel="preload" href="/doc/assets/js/app.2580b191.js" as="script"><link rel="preload" href="/doc/assets/js/2.93ca64ef.js" as="script"><link rel="preload" href="/doc/assets/js/14.0007bd6f.js" as="script"><link rel="prefetch" href="/doc/assets/js/10.ddbcb316.js"><link rel="prefetch" href="/doc/assets/js/11.71c79b04.js"><link rel="prefetch" href="/doc/assets/js/12.d946aed6.js"><link rel="prefetch" href="/doc/assets/js/13.85f42e27.js"><link rel="prefetch" href="/doc/assets/js/15.094a9a73.js"><link rel="prefetch" href="/doc/assets/js/16.7d982ab6.js"><link rel="prefetch" href="/doc/assets/js/17.86cb0ec9.js"><link rel="prefetch" href="/doc/assets/js/18.8ceaa469.js"><link rel="prefetch" href="/doc/assets/js/19.3e2e7773.js"><link rel="prefetch" href="/doc/assets/js/20.5ae6e7f9.js"><link rel="prefetch" href="/doc/assets/js/21.5315e4b6.js"><link rel="prefetch" href="/doc/assets/js/22.759aab96.js"><link rel="prefetch" href="/doc/assets/js/23.e42f6a0c.js"><link rel="prefetch" href="/doc/assets/js/24.a760b413.js"><link rel="prefetch" href="/doc/assets/js/25.52e59918.js"><link rel="prefetch" href="/doc/assets/js/3.d803083d.js"><link rel="prefetch" href="/doc/assets/js/4.1870bb72.js"><link rel="prefetch" href="/doc/assets/js/5.a548c4af.js"><link rel="prefetch" href="/doc/assets/js/6.8d385b3d.js"><link rel="prefetch" href="/doc/assets/js/7.068d62da.js"><link rel="prefetch" href="/doc/assets/js/8.b6ff1fff.js"><link rel="prefetch" href="/doc/assets/js/9.dfaedd77.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.ba170dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc/" class="home-link router-link-active"><!----> <span class="site-name">EasyGQL Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc/introduction/introduction.html" class="sidebar-link">一、介绍</a></li><li><a href="/doc/query/query.html" class="sidebar-link">二、查询</a></li><li><a href="/doc/mutation/mutation.html" class="sidebar-link">三、修改</a></li><li><a href="/doc/subscription/subscription.html" class="sidebar-link">四、实时订阅</a></li><li><a href="/doc/authentication/authentication.html" class="sidebar-link">五、鉴权</a></li><li><a href="/doc/migration/migration.html" class="sidebar-link">六、数据迁移</a></li><li><a href="/doc/schema/schema.html" class="sidebar-link">七、EasyGQL Schema</a></li><li><a href="/doc/api_reference/api_reference.html" class="sidebar-link">八、API列表</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="六、对象类型"><a href="#六、对象类型" class="header-anchor">#</a> 六、对象类型</h1> <p>在EasyGQL中,开发者可以通过EasyGQL提供的框架非常方便的扩展数据类型，EasyGQL会为数据类型提供持久化服务、对应数据的增删改查接口以及相应的权限控制。</p> <h2 id="_6-1-对象定义"><a href="#_6-1-对象定义" class="header-anchor">#</a> 6.1  对象定义</h2> <p>要完整描述一个对象，需要定义如下属性：</p> <table><thead><tr><th style="text-align:left;">序号</th> <th style="text-align:left;">属性名</th> <th style="text-align:left;">含义</th> <th style="text-align:left;">默认值</th> <th style="text-align:left;">是否非空</th></tr></thead> <tbody><tr><td style="text-align:left;">1</td> <td style="text-align:left;">id</td> <td style="text-align:left;">类型唯一标识</td> <td style="text-align:left;">系统会自动赋予每个新增字段一个唯一标识</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">2</td> <td style="text-align:left;">name</td> <td style="text-align:left;">类型名称</td> <td style="text-align:left;">无</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">3</td> <td style="text-align:left;">scalarfields</td> <td style="text-align:left;">标量字段列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">4</td> <td style="text-align:left;">enumfields</td> <td style="text-align:left;">枚举字段列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">5</td> <td style="text-align:left;">fromrelations</td> <td style="text-align:left;">左关联字段列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">6</td> <td style="text-align:left;">torelations</td> <td style="text-align:left;">右关联字段列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">7</td> <td style="text-align:left;">unreadable_roles</td> <td style="text-align:left;">不可读角色列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">8</td> <td style="text-align:left;">uninsertable_roles</td> <td style="text-align:left;">不可插入角色列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">9</td> <td style="text-align:left;">undeletable_roles</td> <td style="text-align:left;">不可删除角色列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">10</td> <td style="text-align:left;">unupdatable_roles</td> <td style="text-align:left;">不可更新角色列表</td> <td style="text-align:left;">空列表</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">11</td> <td style="text-align:left;">read_constraints</td> <td style="text-align:left;">读约束</td> <td style="text-align:left;">空map</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">12</td> <td style="text-align:left;">update_constraints</td> <td style="text-align:left;">更新约束</td> <td style="text-align:left;">空map</td> <td style="text-align:left;">非空</td></tr> <tr><td style="text-align:left;">13</td> <td style="text-align:left;">delete_constraints</td> <td style="text-align:left;">删除约束</td> <td style="text-align:left;">空map</td> <td style="text-align:left;">否</td></tr> <tr><td style="text-align:left;">14</td> <td style="text-align:left;">unique_constraints</td> <td style="text-align:left;">唯一约束</td> <td style="text-align:left;">空map</td> <td style="text-align:left;">否</td></tr> <tr><td style="text-align:left;">15</td> <td style="text-align:left;">description</td> <td style="text-align:left;">描述</td> <td style="text-align:left;">&quot;&quot;</td> <td style="text-align:left;">否</td></tr></tbody></table> <p>一个对象类型主要包含以下信息：</p> <ul><li>id、名字、描述等信息</li> <li>标量字段、枚举类型字段、关联字段等字段信息</li> <li>增删改查等操作的角色限制信息</li> <li>每一个角色对于增删改查的行级约束信息</li></ul> <h2 id="_6-2-对象类型定义的api"><a href="#_6-2-对象类型定义的api" class="header-anchor">#</a> 6.2 对象类型定义的API</h2> <p>在EasyGQL控制台这个Schema中，为对象类型的增加和修改提供了以下API</p> <h3 id="_6-2-1-对象类型的新增"><a href="#_6-2-1-对象类型的新增" class="header-anchor">#</a> 6.2.1 对象类型的新增</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>input ContentTypeInput  <span class="token punctuation">{</span>
+  delete_constraints<span class="token operator">:</span> Object
+  description<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  name<span class="token operator">:</span> String<span class="token operator">!</span>
+  read_constraints<span class="token operator">:</span> Object
+  undeletable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  uninsertable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  unreadable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  unupdatable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  update_constraints<span class="token operator">:</span> Object
+<span class="token punctuation">}</span>
+<span class="token function">objecttypesInSchema_IDInput</span><span class="token punctuation">(</span>from_id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">,</span> reset<span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> to_id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> _NestInputResult 
+<span class="token function">objecttypesInSchema_ObjectInput</span><span class="token punctuation">(</span>from_id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">,</span> reset<span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">,</span> to_object<span class="token operator">:</span> <span class="token punctuation">[</span>ContentTypeInput<span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> _NestInputResult 
+</code></pre></div><p>以上API是在一个schema中增加一个对象类型的API，</p> <h3 id="_6-2-2-对象类型的修改"><a href="#_6-2-2-对象类型的修改" class="header-anchor">#</a> 6.2.2 对象类型的修改</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>input ContentTypeUpdateInput  <span class="token punctuation">{</span>
+  delete_constraints<span class="token operator">:</span> Object
+  description<span class="token operator">:</span> String
+  id<span class="token operator">:</span> <span class="token constant">ID</span>
+  name<span class="token operator">:</span> String
+  read_constraints<span class="token operator">:</span> Object
+  undeletable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  uninsertable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  unreadable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  unupdatable_roles<span class="token operator">:</span> <span class="token punctuation">[</span>Role<span class="token punctuation">]</span>
+  update_constraints<span class="token operator">:</span> Object
+<span class="token punctuation">}</span>
+input ContentTypeWhereInput  <span class="token punctuation">{</span>
+  and<span class="token operator">:</span> <span class="token punctuation">[</span>ContentTypeWhereInput<span class="token punctuation">]</span>
+  field_contains<span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">]</span>
+  filter<span class="token operator">:</span> ContentTypeFieldFilter
+  not<span class="token operator">:</span> ContentTypeWhereInput
+  or<span class="token operator">:</span> <span class="token punctuation">[</span>ContentTypeWhereInput<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token function">ContentTypeUpdate</span><span class="token punctuation">(</span>object<span class="token operator">:</span> ContentTypeUpdateInput<span class="token operator">!</span><span class="token punctuation">,</span> where<span class="token operator">:</span> ContentTypeWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> ContentType_UpdateResult
+</code></pre></div><p>以上是对一个对象类型进行修改的API</p> <h3 id="_6-2-3-对象类型的删除"><a href="#_6-2-3-对象类型的删除" class="header-anchor">#</a> 6.2.3 对象类型的删除</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">objecttypesInSchema_NestRemove</span><span class="token punctuation">(</span>from_id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token constant">ID</span><span class="token punctuation">]</span><span class="token operator">!</span><span class="token punctuation">,</span> to_id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> _NestRemoveResult 
+</code></pre></div><p>以上是对一个对象类型进行删除的API</p> <h3 id="_6-2-4-对象类型的查询"><a href="#_6-2-4-对象类型的查询" class="header-anchor">#</a> 6.2.4 对象类型的查询</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">ContentType</span><span class="token punctuation">(</span>id<span class="token operator">:</span> <span class="token constant">ID</span><span class="token operator">!</span><span class="token punctuation">)</span><span class="token operator">:</span> ContentType
+<span class="token function">ContentTypeMany</span><span class="token punctuation">(</span>where<span class="token operator">:</span> ContentTypeWhereInput<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token punctuation">[</span>ContentType<span class="token punctuation">]</span>
+</code></pre></div><p>以上是对一个对象类型进行查询的API,可以通过查询shema信息查询到一个schema下的所有对象类型</p> <h2 id="_6-3-对象的api"><a href="#_6-3-对象的api" class="header-anchor">#</a> 6.3 对象的API</h2> <p>针对每一个对象类型，EasyGQL会为该类型在数据库中定义相应的数据库存储结构，同时对外提供6种API（以Chat对象类型为例）</p> <h3 id="_6-3-1-新增api"><a href="#_6-3-1-新增api" class="header-anchor">#</a> 6.3.1 新增API</h3> <div class="language- extra-class"><pre class="language-text"><code>Createchat(conflict: String = &quot;replace&quot;, objects: [chatInput]): insert_return
+Createchatroom(conflict: String = &quot;replace&quot;, objects: [chatroomInput]): insert_return
+</code></pre></div><p>conflict是一个冲突解决配置，默认为replace，表示当碰到ID重复的数据对象时进行整体替代，其他可选择值为update，update表示对冲突对象中重复的字段进行更新，原有的字段如果在插入的时候没有被声明将会保留。</p> <p>objects 是对应对象的一个数组，对应输入对象的类型为“对象名Input”,例如：</p> <div class="language- extra-class"><pre class="language-text"><code>input chatInput {
+  chatroom: ID!
+  from: String!
+  id: ID
+  message: String!
+}
+input chatroomInput {
+  id: ID
+  owner: String!
+}
+</code></pre></div><p>进行数据插入时，对应输入类型与之前定义的类型区别主要有：</p> <ul><li>增加了一个可选字段id,如果插入时不给该字段赋值，EasyGQL会自动赋予一个UUID为该数据对象的唯一主键。</li> <li>在存在对象嵌套的情况下，用对应对象的id表示该对象。</li></ul> <p>进行数据插入时返回值的格式如下有三部分组成：affectedrow表示被影响的行数：</p> <div class="language- extra-class"><pre class="language-text"><code>type insert_return {
+  affectedrow: Int
+}
+</code></pre></div><h3 id="_6-2-2-对象的删除"><a href="#_6-2-2-对象的删除" class="header-anchor">#</a> 6.2.2 对象的删除</h3> <p>针对用户定义的每一个对象，EasyGQL会提供一个名为&quot;Delete对象名&quot;数据删除接口，输入参数是查询条件。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>Deletechat(where: chatWhereFilter): delete_return
+Deletechatroom(where: chatroomWhereFilter): delete_return
+</code></pre></div><p>参数where为数据查询时的过滤条件，满足过滤条件的所有对象均会被删除。</p> <p>数据返回有三部分数据：affectedrow表示被影响的行数。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>type delete_return {
+  affectedrow: Int
+}
+</code></pre></div><h3 id="_6-2-3-对象的修改"><a href="#_6-2-3-对象的修改" class="header-anchor">#</a> 6.2.3 对象的修改</h3> <p>针对用户定义的每一个对象，EasyGQL会提供一个&quot;Update对象名&quot;的数据更新接口，该接口接受两个参数：where表示查询条件，object表示待更新的值。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>Updatechat(object: chatUpdateInput!, where: chatWhereFilter): update_return
+Updatechatroom(object: chatroomUpdateInput!, where: chatroomWhereFilter): update_return
+</code></pre></div><p>object的对象类型是“对象名UpdateInput”，是必填字段。“对象名UpdateInput”与&quot;对象名input&quot;的区别是所有字段均为非必填字段。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>input chatUpdateInput {
+  chatroom: ID
+  from: String
+  id: ID
+  message: String
+}
+input chatroomUpdateInput {
+  id: ID
+  owner: String
+}
+</code></pre></div><p>返回值有三部分内容：affectedrow表示更新的行数，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>type update_return {
+  affectedrow: Int
+}
+</code></pre></div><h3 id="_6-2-4-对象的查找"><a href="#_6-2-4-对象的查找" class="header-anchor">#</a> 6.2.4 对象的查找</h3> <p>针对用户定义的每一个对象类型，EasyGQL提供两个查询接口：“对象名Many”和“对象名byid”。</p> <h4 id="_6-2-4-1-对象名many"><a href="#_6-2-4-1-对象名many" class="header-anchor">#</a> 6.2.4.1 &quot;对象名Many&quot;</h4> <p>如下是chats和chatrooms的定义:</p> <p>chatroomMany(first: Int = -1, last: Int = -1, limit: Int = 2147483647, orderby: String, skip: Int = 0, where: chatroomWhereInput): chatroom</p> <p>chatMany(first: Int = -1, last: Int = -1, limit: Int = 2147483647, orderby: String, skip: Int = 0, where: chatWhereFilter): chat</p> <p>在以上定义中：</p> <ul><li>first表示按照当前排序规则取前xx个要素。</li> <li>last表示按照当前排序规则取最后xx个要素。</li> <li>limit表示按照当前排序规则取最多XX个要素。limit不能和first、last共用。</li> <li>skip表示按照当前排序规则从第XX个元素开始取值。skip不能和first、last共用，skip可以和limit进行组合分页。</li> <li>orderby表示查询时的排序规则，使用方法如“chatroom,desc”，表示对chatroom进行倒序排列。</li> <li>&quot;对象名WhereFilter“表示对象的过滤条件。</li></ul> <p>过滤条件对象“对象名WhereInput”：</p> <div class="language- extra-class"><pre class="language-text"><code>input chatWhereInput {
+  and: chatWhereInput
+  filter: chatFieldFilter
+  field_contains: [String]
+  not: chatWhereInput
+  or: chatWhereInput
+}
+input chatroomWhereInput {
+  and: chatroomWhereInput
+  col: chatroomFieldFilter
+  field_contains: [String]
+  not: chatroomWhereInput
+  or: chatroomWhereInput
+}
+input chatFieldFilter {
+  chatroom: IDFilter
+  from: StringFilter
+  id: IDFilter
+  message: StringFilter
+}
+input chatroomFieldFilter {
+  id: IDFilter
+  owner: StringFilter
+}
+</code></pre></div><ul><li>其中：</li> <li>and,or,not表示对后续过滤条件的与、或、非操作。</li> <li>field_contains，表示所查询对象必须包含的字段。</li> <li>&quot;对象名FieldFilter&quot;是所查询对象的字段级过滤条件，根据每个字段所基于的标量类型不一样，查询过滤条件不一样。具体见下表：</li></ul> <table><thead><tr><th style="text-align:left;">标量类型</th> <th>操作符</th></tr></thead> <tbody><tr><td style="text-align:left;">String</td> <td>eq,ne,lt,le,gt,ge,match</td></tr> <tr><td style="text-align:left;">Int</td> <td>eq,ne,lt,le,gt,ge</td></tr> <tr><td style="text-align:left;">Long</td> <td>eq,ne,lt,le,gt,ge</td></tr> <tr><td style="text-align:left;">BigDecimal</td> <td>eq,ne,lt,le,gt,ge</td></tr> <tr><td style="text-align:left;">ID</td> <td>eq,ne,lt,le,gt,ge,match</td></tr> <tr><td style="text-align:left;">Boolean</td> <td>istrue</td></tr> <tr><td style="text-align:left;">List</td> <td>hasone,none,all</td></tr></tbody></table> <h4 id="_6-2-4-2-对象名"><a href="#_6-2-4-2-对象名" class="header-anchor">#</a> 6.2.4.2 &quot;对象名&quot;</h4> <p>操作定义如下：</p> <div class="language- extra-class"><pre class="language-text"><code>chatd: ID!): chat
+chatroom(id: ID!): chatroom
+</code></pre></div><p>这是根据ID，返回一个确定对象的方法。</p> <h3 id="_6-2-5-对象的订阅"><a href="#_6-2-5-对象的订阅" class="header-anchor">#</a> 6.2.5 对象的订阅</h3> <p>自定义对象的订阅接口是自定义对象的实时API，能够根据确定的查询条件，返回指定对象的变更。</p> <div class="language- extra-class"><pre class="language-text"><code>input chatroom_FieldsMap  {
+  members: Boolean = false
+  roominfo: Boolean = false
+  roomname: Boolean = false
+}
+
+input chat_FieldsMap  {
+  content: Boolean = false
+  from: Boolean = false
+}
+
+chatroomListener(select: chatroom_FieldsMap, watch: chatroom_FieldsMap, where: chatroomWhereInput): Object 
+chatListener(select: chat_FieldsMap, watch: chat_FieldsMap, where: chatWhereInput): Object 
+</code></pre></div><p>订阅接口的输入参数中：</p> <ul><li>select是希望订阅结果返回的字段名</li> <li>watch是希望监控变化的字段名</li> <li>where是查询条件</li></ul> <p>返回结果有3个字段：</p> <ul><li>action，表示操作的种类有：insert、update、delete</li> <li>new_val, 表示新的值</li> <li>old_val, 表示旧的值</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.2580b191.js" defer></script><script src="/doc/assets/js/2.93ca64ef.js" defer></script><script src="/doc/assets/js/14.0007bd6f.js" defer></script>
+  </body>
+</html>
