@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SchemaCreate | EasyGQL Documentation</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/doc/img/favicon.ico">
+    <meta name="description" content="EasyGQL 文档">
+    <link rel="preload" href="/doc/assets/css/0.styles.ba170dd8.css" as="style"><link rel="preload" href="/doc/assets/js/app.b791fc28.js" as="script"><link rel="preload" href="/doc/assets/js/2.93ca64ef.js" as="script"><link rel="preload" href="/doc/assets/js/8.4592f1b4.js" as="script"><link rel="prefetch" href="/doc/assets/js/10.4de207f3.js"><link rel="prefetch" href="/doc/assets/js/11.ba92edd1.js"><link rel="prefetch" href="/doc/assets/js/12.69d19805.js"><link rel="prefetch" href="/doc/assets/js/13.e3ec0e41.js"><link rel="prefetch" href="/doc/assets/js/14.aa523e3d.js"><link rel="prefetch" href="/doc/assets/js/15.244570ec.js"><link rel="prefetch" href="/doc/assets/js/16.5fd74724.js"><link rel="prefetch" href="/doc/assets/js/17.2f17b380.js"><link rel="prefetch" href="/doc/assets/js/18.95283607.js"><link rel="prefetch" href="/doc/assets/js/19.fda34197.js"><link rel="prefetch" href="/doc/assets/js/20.3651b434.js"><link rel="prefetch" href="/doc/assets/js/21.5ff64d6a.js"><link rel="prefetch" href="/doc/assets/js/22.90eb7f3d.js"><link rel="prefetch" href="/doc/assets/js/23.bc38f969.js"><link rel="prefetch" href="/doc/assets/js/24.4d128aff.js"><link rel="prefetch" href="/doc/assets/js/25.2d8bd82b.js"><link rel="prefetch" href="/doc/assets/js/26.21d013ec.js"><link rel="prefetch" href="/doc/assets/js/27.ddf308b8.js"><link rel="prefetch" href="/doc/assets/js/3.17c6633e.js"><link rel="prefetch" href="/doc/assets/js/4.1870bb72.js"><link rel="prefetch" href="/doc/assets/js/5.70487094.js"><link rel="prefetch" href="/doc/assets/js/6.c8ae8725.js"><link rel="prefetch" href="/doc/assets/js/7.dcf9958e.js"><link rel="prefetch" href="/doc/assets/js/9.df57f028.js">
+    <link rel="stylesheet" href="/doc/assets/css/0.styles.ba170dd8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/doc/" class="home-link router-link-active"><!----> <span class="site-name">EasyGQL Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://easygql.github.io/easygql" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/doc/introduction/introduction.html" class="sidebar-link">一、介绍</a></li><li><a href="/doc/query/query.html" class="sidebar-link">二、查询</a></li><li><a href="/doc/mutation/mutation.html" class="sidebar-link">三、修改</a></li><li><a href="/doc/subscription/subscription.html" class="sidebar-link">四、实时订阅</a></li><li><a href="/doc/authentication/authentication.html" class="sidebar-link">五、鉴权</a></li><li><a href="/doc/migration/migration.html" class="sidebar-link">六、数据迁移</a></li><li><a href="/doc/schema/schema.html" class="sidebar-link">七、EasyGQL Schema</a></li><li><a href="/doc/api_reference/api_reference.html" class="sidebar-link">八、API列表</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="schemacreate"><a href="#schemacreate" class="header-anchor">#</a> SchemaCreate</h2> <p>SchemaCreate接收3个参数：</p> <ul><li>databasekind 数据库类型</li> <li>name  schema的名字</li> <li>description schema的描述
+返回值是SchemaCreate_ThirdOutput，有两个属性：</li> <li>affected_rows ： 新增Schema的数量</li> <li>id_list ： 新增Schema的id列表
+例如：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaCreate(databasekind:PostgreSQL,name:&quot;testschema2&quot;,description:&quot;test schema 20200511&quot;) {
+    affected_rows
+    id_list
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaCreate&quot;: {
+      &quot;affected_rows&quot;: 1,
+      &quot;id_list&quot;: [
+        &quot;5eb95beaa7b11b000140bfd3&quot;
+      ]
+    }
+  }
+}
+</code></pre></div><h2 id="schemadestory"><a href="#schemadestory" class="header-anchor">#</a> SchemaDestory</h2> <p>SchemaDestory接收一个参数：</p> <ul><li>where 类型为SchemaWhereInput
+返回值为：</li> <li>affected_rows，删除的行数
+SchemaWhereInput的定义为：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input SchemaWhereInput   {
+  field_contains:[String]
+  filter: SchemaFieldFilter
+  and:[SchemaWhereInput]
+  not: SchemaWhereInput
+  or:[SchemaWhereInput] 
+}
+input SchemaFieldFilter  {
+  databasekind: DatabaseKind_EnumFilter
+  datasource: DataSourceFieldFilter
+  description: StringFilter
+  enumtypes: EnumTypeListMatch
+  id: IDFilter
+  name: StringFilter
+  objecttypes: ContentTypeListMatch
+  published_history: SchemaMetaDataListMatch
+  published_schema: SchemaMetaDataFieldFilter
+  relations: RelationFieldListMatch
+  status: SchemaStatus_EnumFilter
+  thirdapis: ThirdAPIListMatch
+  triggers: TriggerListMatch
+}
+</code></pre></div><p>具体标量类型的比较操作符见<a href="/doc/apiinfo/filter.html">标量类型比较操作符</a></p> <p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaDestroy (where:{
+    filter:{
+      id:{
+        eq:&quot;5eba9b9ba7b11b000140bfda&quot;
+			}
+    }
+  }) {
+    affected_rows
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaDestroy&quot;: {
+      &quot;affected_rows&quot;: 1
+    }
+  }
+}
+</code></pre></div><h2 id="schemapublish"><a href="#schemapublish" class="header-anchor">#</a> SchemaPublish</h2> <p>SchemaPublish是Schema发布的API，他将最新的Schema发布到运行时，这个API接收的参数有：</p> <ul><li>schemaid,要发布的Schemaid
+返回的值有：</li> <li>OperationResult：表示发布成功或失败</li></ul> <p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaPublish(schemaid:&quot;5eba9b9ba7b11b000140bfda&quot;) {
+    OperationResult
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaDestroy&quot;: {
+      &quot;OperationResult&quot;: true
+    }
+  }
+}
+</code></pre></div><h2 id="schemarestart"><a href="#schemarestart" class="header-anchor">#</a> SchemaRestart</h2> <p>SchemaRestart是Schema重启的API，这个API接收的参数有：</p> <ul><li>schemaid,要重启的Schemaid
+返回的值有：</li> <li>OperationResult：表示重启成功或失败</li></ul> <p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaRestart(schemaid:&quot;5eba9b9ba7b11b000140bfda&quot;) {
+    OperationResult
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaRestart&quot;: {
+      &quot;OperationResult&quot;: true
+    }
+  }
+}
+</code></pre></div><h2 id="schemastart"><a href="#schemastart" class="header-anchor">#</a> SchemaStart</h2> <p>SchemaStart是Schema启动的API，这个API接收的参数有：</p> <ul><li>schemaid,要启动的Schemaid
+返回的值有：</li> <li>OperationResult：表示启动成功或失败</li></ul> <p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaStart(schemaid:&quot;5eba9b9ba7b11b000140bfda&quot;) {
+    OperationResult
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaStart&quot;: {
+      &quot;OperationResult&quot;: true
+    }
+  }
+}
+</code></pre></div><h2 id="schemastop"><a href="#schemastop" class="header-anchor">#</a> SchemaStop</h2> <p>SchemaStop是Schema停止的API，这个API接收的参数有：</p> <ul><li>schemaid,要启动的Schemaid
+返回的值有：</li> <li>OperationResult：表示停止成功或失败</li></ul> <p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaStop(schemaid:&quot;5eba9b9ba7b11b000140bfda&quot;) {
+    OperationResult
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaStop&quot;: {
+      &quot;OperationResult&quot;: true
+    }
+  }
+}
+</code></pre></div><h2 id="schemaupdate"><a href="#schemaupdate" class="header-anchor">#</a> SchemaUpdate</h2> <p>SchemaUpdate是Schema的更新API，这个API接收的参数有：</p> <ul><li>where,SchemaWhereInput字段，表示此次需要进行更新的Schema需要满足的条件</li> <li>object, SchemaUpdateInput字段，表示需要修改的字段，不在object的字段，将不会被更新,object中不能包含id（一个对象的id不能被更新，lastupdate类型的字段进行更新无效）
+这个API的返回参数为：
+返回值为：</li> <li>affected_rows，更新的行数</li></ul> <p>SchemaUpdateInput的定义如下：</p> <div class="language- extra-class"><pre class="language-text"><code>input SchemaUpdateInput  {
+  databasekind: DatabaseKind
+  description: String
+  name: String
+  status: SchemaStatus
+}
+</code></pre></div><p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaUpdate(where:{
+    filter:{
+      id:{
+        eq:&quot;5eba9b9ba7b11b000140bfda&quot;
+      }
+    }
+  },object:{
+    name:&quot;tests schema for update&quot;
+  }) {
+		affected_rows
+  }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaUpdate&quot;: {
+      &quot;affected_rows&quot;: 1
+    }
+  }
+}
+</code></pre></div><h2 id="schema"><a href="#schema" class="header-anchor">#</a> Schema</h2> <p>Schema这个API，是通过ID，查询固定的Schema的API，它接收一个参数：</p> <ul><li>id, 查询Schema的ID
+返回的为null或者1个Schema对象，Schema对象的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type Schema  {
+ databasekind: DatabaseKind
+ datasource: DataSource
+ description: String
+ enumtypes: [EnumType]
+ id: ID
+ name: String
+ objecttypes: [ContentType]
+ published_history: [SchemaMetaData]
+ published_schema: SchemaMetaData
+ relations: [RelationField]
+ status: SchemaStatus
+ thirdapis: [ThirdAPI]
+ triggers: [Trigger]
+}
+</code></pre></div><p>例如：</p> <div class="language- extra-class"><pre class="language-text"><code>query {
+ Schema(id:&quot;5eb95beaa7b11b000140bfd3&quot;) {
+   name
+   id
+   objecttypes {
+     id
+     name
+   }
+   enumtypes {
+     values {
+       id
+     }
+   }
+   datasource {
+     id
+   }
+ }
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+ &quot;data&quot;: {
+   &quot;Schema&quot;: {
+     &quot;name&quot;: &quot;testschema2&quot;,
+     &quot;id&quot;: &quot;5eb95beaa7b11b000140bfd3&quot;,
+     &quot;objecttypes&quot;: [
+       {
+         &quot;id&quot;: &quot;5eb95beaa7b11b000140bfd4&quot;,
+         &quot;name&quot;: &quot;User&quot;
+       }
+     ],
+     &quot;enumtypes&quot;: [
+       {
+         &quot;values&quot;: [
+           {
+             &quot;id&quot;: &quot;5eb95beaa7b11b000140bfd8&quot;
+           },
+           {
+             &quot;id&quot;: &quot;5eb95beaa7b11b000140bfd9&quot;
+           }
+         ]
+       }
+     ],
+     &quot;datasource&quot;: null
+   }
+ }
+}
+</code></pre></div><p>注意：datasource为null，不表示这个Schema没有数据源，没有指定datasource的Schema会在发布的时候使用EasyGQL控制台的数据库实例，新建数据库名为Schema名 的数据库。</p> <h2 id="schemamany"><a href="#schemamany" class="header-anchor">#</a> SchemaMany</h2> <p>SchemaMany是一个根据where条件进行查询的接口，支持分页和排序，它接收以下参数：</p> <ul><li>where，SchemaWhereInput的参数</li> <li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为 Schema的一个列表
+例如：
+输入：</p> <div class="language- extra-class"><pre class="language-text"><code>query {
+ SchemaMany(orderby:&quot;name,asc&quot;,limit:10) {
+   name
+ }
+ 
+}
+</code></pre></div><p>返回值为：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaMany&quot;: [
+      {
+        &quot;name&quot;: &quot;testcase1&quot;
+      }
+    ]
+  }
+}
+</code></pre></div><h2 id="schemalistener"><a href="#schemalistener" class="header-anchor">#</a> SchemaListener</h2> <p>SchemaListener是Schema的监听器，能够在Schema发生变化时通知订阅着，这个API接收3个参数：</p> <ul><li>select是表示返回结果集应该包含的字段，&quot;{字段名1:true|false，字段2:true|false}&quot;表示，当不声明这个字段是，默认为选择了所有字段。</li> <li>watch是表示监听器监听的字段，格式为&quot;{字段名1:true|false，字段2:true|false}&quot;，当不声明该字段时，所有字段变化（内嵌对象除外）均会触发监听事件。</li> <li>where是表示监听的条件，格式为SchemaWhereInput。</li></ul> <p>例如创建完Schema后</p> <div class="language- extra-class"><pre class="language-text"><code>mutation  {
+  SchemaCreate(name:&quot;testcase1&quot;,databasekind:PostgreSQL,description:&quot;testcase2&quot;){
+    id_list 
+    affected_rows 
+  }
+}
+</code></pre></div><p>返回</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;data&quot;: {
+    &quot;SchemaCreate&quot;: {
+      &quot;id_list&quot;: [
+        &quot;5ebd5626f5380d1edc1d2d2e&quot;
+      ],
+      &quot;affected_rows&quot;: 1
+    }
+  }
+}
+</code></pre></div><p>使用监听器监听schmea的变化</p> <div class="language- extra-class"><pre class="language-text"><code>subscription {
+  SchemaListener(
+    select:{
+      name:true
+      status:true
+    }
+    watch:{
+      name:true
+    }
+    where:{
+    filter:{
+      id:{
+        eq:&quot;5ebd5626f5380d1edc1d2d2e&quot;
+      }
+		}
+  })
+}
+</code></pre></div><p>修改schema名字后</p> <div class="language- extra-class"><pre class="language-text"><code>mutation {
+  SchemaUpdate(object:{
+    name:&quot;test_for_listen5&quot;
+  },
+    where:{
+      filter:{
+        id:{
+          eq:&quot;5ebd5626f5380d1edc1d2d2e&quot;
+        }
+      }
+    }
+  ) {
+    affected_rows
+  }
+}
+</code></pre></div><p>得到的监听事件是</p> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><h2 id="usercreate"><a href="#usercreate" class="header-anchor">#</a> UserCreate</h2> <p>UserCreate是默认的任意一个Schema均有的创建用户的API，它接收两个参数：</p> <ul><li>object，一个UserInput的数组，</li> <li>conflict，冲突解决方案，默认为replace（还有error），就是创建对象是如果数据冲突，默认为覆盖。</li></ul> <p>返回值为</p> <ul><li>affected_rows,受影响的行数</li> <li>id_list，返回的ID列表。</li></ul> <h2 id="userdestory"><a href="#userdestory" class="header-anchor">#</a> UserDestory</h2> <p>UserDestory是默认的任意一个Schema均提供的删除用户的API，它接收一个参数</p> <ul><li>where,删除条件UserWhereInput</li></ul> <p>返回值为</p> <ul><li>affected_rows,受影响的行数</li></ul> <h2 id="userupdate"><a href="#userupdate" class="header-anchor">#</a> UserUpdate</h2> <p>UserUpdate是默认的任意一个Schema均提供的用户更新的API，它接收两个参数</p> <ul><li>where,UserWhereInput字段，表示此次需要进行更新的用户需要满足的条件</li> <li>object, UserUpdateInput字段，表示需要修改的字段，不在object的字段，将不会被更新,object中不能包含id（一个对象的id不能被更新，lastupdate类型的字段进行更新无效）
+这个API的返回参数为：
+返回值为：</li> <li>affected_rows，更新的行数</li></ul> <h2 id="userlogin"><a href="#userlogin" class="header-anchor">#</a> UserLogin</h2> <p>UserLogin是EasyGQL默认为每一个Schema提供的用户登录的API，它接收两个参数</p> <ul><li>username， 表示用户名</li> <li>password，表示密码
+返回参数有两个个：</li> <li>login_result，true|false，表示登录是否成功</li> <li>token ，登录成功返回的token</li></ul> <h2 id="user"><a href="#user" class="header-anchor">#</a> User</h2> <p>User是根据用户ID查询用户的所有信息的API
+接收参数有：</p> <ul><li>id，表示用户的ID
+返回的参数可以是对应Schema的用户对象的所有属性，但是为了安全起见，建议在进行设计时，将用户的密码字段设置为不可以查询。</li></ul> <h2 id="usermany"><a href="#usermany" class="header-anchor">#</a> UserMany</h2> <p>UserMany是根据条件查询用户信息的API，接收的参数有：</p> <ul><li>where，UserWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input UserWhereInput  {
+  and: [UserWhereInput]
+  field_contains: [String]
+  filter: UserFieldFilter
+  not: UserWhereInput
+  or: [UserWhereInput]
+}
+input UserFieldFilter  {
+  id: IDFilter
+  password: StringFilter
+  role: Role_EnumFilter
+  username: StringFilter
+}
+
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为 User的一个列表</p> <h2 id="userlistener"><a href="#userlistener" class="header-anchor">#</a> UserListener</h2> <p>这是用户监听器，可以监听EasyGQL引擎为所有Schema提供的监听用户信息变化的工具，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,不同Schema因为用户信息字段不一样，select具体字段存在差异，但至少拥有以下几个字段</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+input User_FieldsMap  {
+ password: Boolean = false
+ role: Boolean = false
+ username: Boolean = false
+}
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,UserWhereInput型参数（具体使用方法同UserMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="objecttypesinschema-objectinput"><a href="#objecttypesinschema-objectinput" class="header-anchor">#</a> objecttypesInSchema_ObjectInput</h2> <p>这个API是在Schema为objecttypes这个内嵌关联关系字段新增数据用的，默认创建新的ContentType类型对象，然后将创建的对象和schema的objecttypes字段关联，它接收以下参数：</p> <ul><li>from_id，schema的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个ContentTypeInput的类型的数组，因为objecttypes字段是一个数组类型，所以to_object可以为0到N个ContentTypeInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建对象的ID列表。</li></ul> <p>ContentTypeInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input ContentTypeUpdateInput {
+  delete_constraints: Object
+  description: String
+  name: String
+  read_constraints: Object
+  undeletable_roles: [Role]
+  uninsertable_roles: [Role]
+  unreadable_roles: [Role]
+  unupdatable_roles: [Role]
+  update_constraints: Object
+}
+</code></pre></div><p>在contentTypeUpdateInput这个字段里，delete_constaint、read_constraint、update_constraint都是用来根据用户角色约束用户查询、修改和删除操作的数据范围的，具体用法见<a href="">权限管理章节</a>,undeleteable_roles、uninsertabel_roles、unupdatable_roles、unreadable_roles是表示禁止使用删除、插入、更新、查询的API接口的角色列表。</p> <h2 id="objecttypesinschema-nestremove"><a href="#objecttypesinschema-nestremove" class="header-anchor">#</a> objecttypesInSchema_NestRemove</h2> <p>这个API是在Schema为objecttypes这个内嵌关联关系字段删除数据用的，在删除关联关系的同时会删除相应的ContentType对象：</p> <ul><li>from_id，schema的ID，必填要素</li> <li>to_id,ContentType类型对象的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="contenttypeupdate"><a href="#contenttypeupdate" class="header-anchor">#</a> ContentTypeUpdate</h2> <p>这个API是按条件更新ContentType对象内容的API，它接收两个参数：</p> <ul><li>object，ContentTypeUpdateInput类型字段，表示需要更新的字段，ContentTypeUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。ContentTypeUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ContentTypeUpdateInput {
+  delete_constraints: Object
+  description: String
+  name: String
+  read_constraints: Object
+  undeletable_roles: [Role]
+  uninsertable_roles: [Role]
+  unreadable_roles: [Role]
+  unupdatable_roles: [Role]
+  update_constraints: Object
+}
+</code></pre></div><ul><li>where,ContentTypeWhereInput类型的字段，用以确定数据更新的范围。ContentTypeWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ContentTypeWhereInput  {
+  and: [ContentTypeWhereInput]
+  field_contains: [String]
+  filter: ContentTypeFieldFilter
+  not: ContentTypeWhereInput
+  or: [ContentTypeWhereInput]
+}
+input ContentTypeFieldFilter  {
+  description: StringFilter
+  enumfields: EnumFieldListMatch
+  id: IDFilter
+  name: StringFilter
+  objecttypes: ContentTypeFieldFilter
+  scalarfields: ScalarFieldListMatch
+  undeletable_roles: Role_EnumListFilter
+  uninsertable_roles: Role_EnumListFilter
+  unique_constraints: UniqueConstraintListMatch
+  unreadable_roles: Role_EnumListFilter
+  unupdatable_roles: Role_EnumListFilter
+}
+
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="contenttypedestroy"><a href="#contenttypedestroy" class="header-anchor">#</a> ContentTypeDestroy</h2> <p>这个API用于根据Where条件删除ContentType对象，它接收的参数有：</p> <ul><li>where，ContentTypeWhereInput类型的字段，表示删除的数据范围
+它返回一个参数：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="contenttype"><a href="#contenttype" class="header-anchor">#</a> ContentType</h2> <p>这个API用于根据ID查询固定的ContentType对象，它接收一个参数：</p> <ul><li>id,表示要查询的ContentType的对象
+它返回一个参数，表示查询到的ContentType对象的具体内容，如果查询到的结果为空，则返回null。返回值的具体类型定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type ContentType  {
+  delete_constraints: Object
+  description: String
+  enumfields: [EnumField]
+  id: ID
+  name: String
+  read_constraints: Object
+  scalarfields: [ScalarField]
+  schemaid: Schema
+  undeletable_roles: [Role]
+  uninsertable_roles: [Role]
+  unique_constraints: [UniqueConstraint]
+  unreadable_roles: [Role]
+  unupdatable_roles: [Role]
+  update_constraints: Object
+}
+</code></pre></div><p>在以上类型定义中，scalarfields表示ContentType对象的标量字段列表、enumfields表示ContentType对象的枚举类型字段列表。</p> <h2 id="contenttypemany"><a href="#contenttypemany" class="header-anchor">#</a> ContentTypeMany</h2> <p>这个API用于根据条件查询ContentType的数据对象，它接收的参数有：</p> <ul><li>where，ContentTypeWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ContentTypeWhereInput  {
+  and: [ContentTypeWhereInput]
+  field_contains: [String]
+  filter: ContentTypeFieldFilter
+  not: ContentTypeWhereInput
+  or: [ContentTypeWhereInput]
+}
+input ContentTypeFieldFilter  {
+  description: StringFilter
+  enumfields: EnumFieldListMatch
+  id: IDFilter
+  name: StringFilter
+  objecttypes: ContentTypeFieldFilter
+  scalarfields: ScalarFieldListMatch
+  undeletable_roles: Role_EnumListFilter
+  uninsertable_roles: Role_EnumListFilter
+  unique_constraints: UniqueConstraintListMatch
+  unreadable_roles: Role_EnumListFilter
+  unupdatable_roles: Role_EnumListFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为ContentType的列表</p> <h2 id="contenttypelistener"><a href="#contenttypelistener" class="header-anchor">#</a> ContentTypeListener</h2> <p>这是对象类型监听器，可以监听EasyGQL引擎中Schema中对象类型的变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ContentType_FieldsMap  {
+ delete_constraints: Boolean = false
+ description: Boolean = false
+ name: Boolean = false
+ read_constraints: Boolean = false
+ schemaid: Boolean = false
+ undeletable_roles: Boolean = false
+ uninsertable_roles: Boolean = false
+ unreadable_roles: Boolean = false
+ unupdatable_roles: Boolean = false
+ update_constraints: Boolean = false
+}
+
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,ContentTypeWhereInput型参数（具体使用方法同ContentTypeMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="enumtypesinschema-objectinput"><a href="#enumtypesinschema-objectinput" class="header-anchor">#</a> enumtypesInSchema_ObjectInput</h2> <p>这个API是在Schema为enumtypes这个内嵌关联关系字段新增数据用的，默认创建新的EnumType（枚举类型）类型对象，然后将创建的对象和schema的enumtypes字段关联，它接收以下参数：</p> <ul><li>from_id，schema的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个EnumTypeInput的类型的数组，因为enumtypes字段是一个数组类型，所以to_object可以为0到N个EnumTypeInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建枚举类型的ID列表。</li></ul> <p>EnumTypeInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input EnumTypeInput  {
+  description: String = &quot;&quot;
+  id: ID
+  name: String!
+}
+</code></pre></div><h2 id="enumtypesinschema-nestremove"><a href="#enumtypesinschema-nestremove" class="header-anchor">#</a> enumtypesInSchema_NestRemove</h2> <p>这个API是在Schema为enumtypes这个内嵌关联关系字段删除数据用的，在删除关联关系的同时会删除和对应枚举类型下的所有枚举元素（EnumElement）对象：</p> <ul><li>from_id，schema的ID，必填要素</li> <li>to_id,EnumType类型对象的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumtypeupdate"><a href="#enumtypeupdate" class="header-anchor">#</a> EnumTypeUpdate</h2> <p>这个API是按条件更新EnumTypes对象内容的API，它接收两个参数：</p> <ul><li>object，EnumTypeUpdateInput类型字段，表示需要更新的字段，EnumTypeUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。EnumTypeUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumTypeInput  {
+  description: String = &quot;&quot;
+  id: ID
+  name: String!
+}
+</code></pre></div><ul><li>where,EnumTypeWhereInput类型的字段，用以确定数据更新的范围。EnumTypeWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumTypeWhereInput  {
+  and: [EnumTypeWhereInput]
+  field_contains: [String]
+  filter: EnumTypeFieldFilter
+  not: EnumTypeWhereInput
+  or: [EnumTypeWhereInput]
+}
+ input EnumTypeFieldFilter @objectfieldfilter_metadata(metadata : &quot;{\&quot;objectname\&quot;:\&quot;EnumType\&quot;}&quot;) {
+  description: StringFilter
+  enumtypes: EnumTypeFieldFilter
+  id: IDFilter
+  name: StringFilter
+  values: EnumElementListMatch
+ }
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumtypedestroy"><a href="#enumtypedestroy" class="header-anchor">#</a> EnumTypeDestroy</h2> <p>这个API是按条件删除枚举类型的API，它接收一个参数</p> <ul><li>where,EnumTypeWhereInput类型的字段，用以确定删除数据的范围。EnumTypeWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumTypeWhereInput  {
+  and: [EnumTypeWhereInput]
+  field_contains: [String]
+  filter: EnumTypeFieldFilter
+  not: EnumTypeWhereInput
+  or: [EnumTypeWhereInput]
+}
+ input EnumTypeFieldFilter @objectfieldfilter_metadata(metadata : &quot;{\&quot;objectname\&quot;:\&quot;EnumType\&quot;}&quot;) {
+  description: StringFilter
+  enumtypes: EnumTypeFieldFilter
+  id: IDFilter
+  name: StringFilter
+  values: EnumElementListMatch
+ }
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumtype"><a href="#enumtype" class="header-anchor">#</a> EnumType</h2> <p>这个API用于根据ID查询固定的EnumType对象，它接收一个参数：</p> <ul><li>id,表示要查询的EnumType的对象
+它返回一个参数，表示查询到的EnumType对象的具体内容，如果查询到的结果为空，则返回null。返回值的具体类型定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type EnumType  {
+  description: String
+  id: ID
+  name: String
+  schemaid: Schema
+  values: [EnumElement]
+}
+</code></pre></div><p>在以上类型定义中，values表示EnumType对象的枚举元素列表。</p> <h2 id="enumtypemany"><a href="#enumtypemany" class="header-anchor">#</a> EnumTypeMany</h2> <p>这个API用于根据条件查询EnumType的数据对象，它接收的参数有：</p> <ul><li>where，EnumTypeWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumTypeWhereInput  {
+  and: [EnumTypeWhereInput]
+  field_contains: [String]
+  filter: EnumTypeFieldFilter
+  not: EnumTypeWhereInput
+  or: [EnumTypeWhereInput]
+}
+ input EnumTypeFieldFilter @objectfieldfilter_metadata(metadata : &quot;{\&quot;objectname\&quot;:\&quot;EnumType\&quot;}&quot;) {
+  description: StringFilter
+  enumtypes: EnumTypeFieldFilter
+  id: IDFilter
+  name: StringFilter
+  values: EnumElementListMatch
+ }
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为EnumType的列表</p> <h2 id="enumtypelistener"><a href="#enumtypelistener" class="header-anchor">#</a> EnumTypeListener</h2> <p>这是枚举类型监听器，可以监听EasyGQL引擎中Schema中枚举类型的变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumType_FieldsMap  {
+ description: Boolean = false
+ name: Boolean = false
+ schemaid: Boolean = false
+}
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,EnumTypeWhereInput型参数（具体使用方法同EnumTypeMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="datasourceinschema-objectinput"><a href="#datasourceinschema-objectinput" class="header-anchor">#</a> datasourceInSchema_ObjectInput</h2> <p>这个API是在Schema为datasource这个内嵌关联关系字段新增数据用的，默认创建新的DataSource（枚举类型）类型对象，如果schema的原有datasource关联的不为空，则删除原有对象：</p> <ul><li>from_id，schema的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个DataSourceInput的类型的数组，因为datasource字段不是数组，所以to_object可以为0到1个DataSourceInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建枚举类型的ID列表。</li></ul> <p>DataSourceInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input DataSourceInput  {
+  character_encoding: String
+  connectionstr: String
+  databasename: String
+  host: String
+  id: ID
+  max_connection: Int
+  max_idle_connection: Int
+  min_connection: Int
+  min_idle_connection: Int
+  name: String!
+  password: String
+  port: String
+  replica_name: String
+  username: String
+}
+</code></pre></div><h2 id="datasourceinschema-nestremove"><a href="#datasourceinschema-nestremove" class="header-anchor">#</a> datasourceInSchema_NestRemove</h2> <p>这个API是在Schema为datasource这个内嵌关联关系字段删除数据用的，在删除关联关系的时候同时会删除对应DataSource对象：</p> <ul><li>from_id，schema的ID，必填要素
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="datasourceupdate"><a href="#datasourceupdate" class="header-anchor">#</a> DataSourceUpdate</h2> <p>这个API是根据条件对数据源进行更新的API，它接收两个参数：</p> <ul><li>object，DataSourceUpdateInput类型字段，表示需要更新的字段，EnumTypeUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。DataSourceUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input DataSourceUpdateInput  {
+  character_encoding: String
+  connectionstr: String
+  databasename: String
+  host: String
+  max_connection: Int
+  max_idle_connection: Int
+  min_connection: Int
+  min_idle_connection: Int
+  name: String
+  password: String
+  port: String
+  replica_name: String
+  username: String
+}
+</code></pre></div><ul><li>where,DataSourceWhereInput类型的字段，用以确定数据更新的范围。DataSourceWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input DataSourceWhereInput  {
+  and: [DataSourceWhereInput]
+  field_contains: [String]
+  filter: DataSourceFieldFilter
+  not: DataSourceWhereInput
+  or: [DataSourceWhereInput]
+}
+input DataSourceFieldFilter  {
+  character_encoding: StringFilter
+  connectionstr: StringFilter
+  databasename: StringFilter
+  datasource: DataSourceFieldFilter
+  host: StringFilter
+  id: IDFilter
+  max_connection: IntFilter
+  max_idle_connection: IntFilter
+  min_connection: IntFilter
+  min_idle_connection: IntFilter
+  name: StringFilter
+  password: StringFilter
+  port: StringFilter
+  replica_name: StringFilter
+  username: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="datasourcedestroy"><a href="#datasourcedestroy" class="header-anchor">#</a> DataSourceDestroy</h2> <p>这个API是按条件删除已经定义好的数据源的API，它接收一个参数</p> <ul><li>where,DatSourceWhereInput类型的字段，用以确定删除数据的范围。DataSourceWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input DataSourceWhereInput  {
+  and: [DataSourceWhereInput]
+  field_contains: [String]
+  filter: DataSourceFieldFilter
+  not: DataSourceWhereInput
+  or: [DataSourceWhereInput]
+}
+input DataSourceFieldFilter  {
+  character_encoding: StringFilter
+  connectionstr: StringFilter
+  databasename: StringFilter
+  datasource: DataSourceFieldFilter
+  host: StringFilter
+  id: IDFilter
+  max_connection: IntFilter
+  max_idle_connection: IntFilter
+  min_connection: IntFilter
+  min_idle_connection: IntFilter
+  name: StringFilter
+  password: StringFilter
+  port: StringFilter
+  replica_name: StringFilter
+  username: StringFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="datasource"><a href="#datasource" class="header-anchor">#</a> DataSource</h2> <p>这个API用于根据ID查询固定的数据源对象，它接收一个参数：</p> <ul><li>id,表示要查询的数据源的对象
+它返回一个参数，表示查询到的数据源对象的具体内容，如果查询到的结果为空，则返回null。返回值的具体类型定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type DataSource {
+  character_encoding: String
+  connectionstr: String
+  databasename: String
+  host: String
+  id: ID
+  max_connection: Int
+  max_idle_connection: Int
+  min_connection: Int
+  min_idle_connection: Int
+  name: String
+  password: String
+  port: String
+  replica_name: String
+  schemaid: Schema
+  username: String
+}
+</code></pre></div><p>在以上类型定义中，schemaid表示数据源所属Schema的信息。</p> <h2 id="datasourcemany"><a href="#datasourcemany" class="header-anchor">#</a> DataSourceMany</h2> <p>这个API用于根据条件查询数据源对象，它接收的参数有：</p> <ul><li>where，DataSourceWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input DataSourceWhereInput  {
+  and: [DataSourceWhereInput]
+  field_contains: [String]
+  filter: DataSourceFieldFilter
+  not: DataSourceWhereInput
+  or: [DataSourceWhereInput]
+}
+input DataSourceFieldFilter  {
+  character_encoding: StringFilter
+  connectionstr: StringFilter
+  databasename: StringFilter
+  datasource: DataSourceFieldFilter
+  host: StringFilter
+  id: IDFilter
+  max_connection: IntFilter
+  max_idle_connection: IntFilter
+  min_connection: IntFilter
+  min_idle_connection: IntFilter
+  name: StringFilter
+  password: StringFilter
+  port: StringFilter
+  replica_name: StringFilter
+  username: StringFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为DataSource的列表</p> <h2 id="datasourcelistener"><a href="#datasourcelistener" class="header-anchor">#</a> DataSourceListener</h2> <p>这是数据源监听器，可以监听EasyGQL引擎中Schema中数据源的变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input DataSource_FieldsMap   {
+ character_encoding: Boolean = false
+ connectionstr: Boolean = false
+ databasename: Boolean = false
+ host: Boolean = false
+ max_connection: Boolean = false
+ max_idle_connection: Boolean = false
+ min_connection: Boolean = false
+ min_idle_connection: Boolean = false
+ name: Boolean = false
+ password: Boolean = false
+ port: Boolean = false
+ replica_name: Boolean = false
+ schemaid: Boolean = false
+ username: Boolean = false
+}
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,DataSourceWhereInput型参数（具体使用方法同DataaSourceMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="valuesinenumtype-objectinput"><a href="#valuesinenumtype-objectinput" class="header-anchor">#</a> valuesInEnumType_ObjectInput</h2> <p>这个API是在枚举类型中为values这个内嵌关联关系字段新增数据用的，也就是新增枚举类型的枚举元素。默认创建新的EnumElement（枚举元素）类型对象：</p> <ul><li>from_id，枚举类型的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个EnumElementInput的类型的数组，因为values字段是数组，所以to_object可以为0到N个EnumElementInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建枚举类型的ID列表。</li></ul> <p>EnumElementInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input EnumElementInput {
+  description: String = &quot;&quot;
+  id: ID
+  value: String!
+}
+
+</code></pre></div><h2 id="valuesinenumtype-nestremove"><a href="#valuesinenumtype-nestremove" class="header-anchor">#</a> valuesInEnumType_NestRemove</h2> <p>这个API是在枚举对象中删除枚举元素用的：</p> <ul><li>from_id，枚举对象的ID，必填要素。</li> <li>to_id,枚举元素的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumelementupdate"><a href="#enumelementupdate" class="header-anchor">#</a> EnumElementUpdate</h2> <p>这个API是枚举元素的更新，它接收以下参数：</p> <ul><li>object，EnumElementUpdateInput类型字段，表示需要更新的字段，EnumTypeUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。EnumElementUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumElementUpdateInput  {
+  description: String
+  value: String
+}
+</code></pre></div><ul><li>where,DataSourceWhereInput类型的字段，用以确定数据更新的范围。DataSourceWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumElementWhereInput  {
+  and: [EnumElementWhereInput]
+  field_contains: [String]
+  filter: EnumElementFieldFilter
+  not: EnumElementWhereInput
+  or: [EnumElementWhereInput]
+}
+input EnumElementFieldFilter  {
+  description: StringFilter
+  id: IDFilter
+  value: StringFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumelementdestroy"><a href="#enumelementdestroy" class="header-anchor">#</a> EnumElementDestroy</h2> <p>这个API是按条件删除已经定义好的枚举元素，它接收一个参数</p> <ul><li>where,EnumElementWhereInput类型的字段，用以确定删除数据的范围。EnumElementWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumElementWhereInput  {
+  and: [EnumElementWhereInput]
+  field_contains: [String]
+  filter: EnumElementFieldFilter
+  not: EnumElementWhereInput
+  or: [EnumElementWhereInput]
+}
+input EnumElementFieldFilter  {
+  description: StringFilter
+  id: IDFilter
+  value: StringFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumelement"><a href="#enumelement" class="header-anchor">#</a> EnumElement</h2> <p>这个API用于根据ID查询枚举元素,它接收一个参数</p> <ul><li>id,表示要查询的枚举元素的ID
+它返回一个参数，表示查询到的数据源对象的具体内容，如果查询到的结果为空，则返回null。返回值的具体类型定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type EnumElement {
+  description: String
+  enumtype: EnumType
+  id: ID
+  value: String
+}
+</code></pre></div><p>在以上类型定义中，enumtype表示数据源所属枚举类型的信息。</p> <h2 id="enumelementmany"><a href="#enumelementmany" class="header-anchor">#</a> EnumElementMany</h2> <p>这个API用于根据where条件查询枚举元素，它接收的参数有：</p> <ul><li>where，ElementWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumElementWhereInput  {
+  and: [EnumElementWhereInput]
+  field_contains: [String]
+  filter: EnumElementFieldFilter
+  not: EnumElementWhereInput
+  or: [EnumElementWhereInput]
+}
+input EnumElementFieldFilter  {
+  description: StringFilter
+  id: IDFilter
+  value: StringFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为Element的列表</p> <h2 id="enumelementlistener"><a href="#enumelementlistener" class="header-anchor">#</a> EnumElementListener</h2> <p>这是枚举元素监听器，可以监听EasyGQL引擎中Schema中枚举类型具体枚举项的变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumElement_FieldsMap  {
+ description: Boolean = false
+ enumtype: Boolean = false
+ value: Boolean = false
+}
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,EnumElementWhereInput型参数（具体使用方法同EnumElementMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="relationsinschema-objectinput"><a href="#relationsinschema-objectinput" class="header-anchor">#</a> relationsInSchema_ObjectInput</h2> <p>这个API是在Schema中为relation这个字段新增数据用的，新增的是不同ContentType对象之间的关联关系，它接收的参数有：</p> <ul><li>from_id，Schema的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个RelationFieldInput的类型的数组，因为relations字段是数组，所以to_object可以为0到N个RelationFieldInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建的关联关系ID列表。</li></ul> <p>RelationFieldInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input RelationFieldInput  {
+  fromfield: String!
+  fromobject: String!
+  id: ID
+  ifcascade: Boolean = false
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  relationtype: RelationType!
+  tofield: String!
+  toobject: String!
+}
+</code></pre></div><p>在以上定义中，fromfield表示关联关系在关联对象中的字段名称，fromobject表示关联关系中关联对象的类型名称（注意是“名称”），toobject是关联关系中，被关联对象的字段名称，toobject表示关联关系中，被关联对象的对象名称,ifcascade表示是否级联删除，invisible_roles表示这个关联关系可以被哪些角色看见，不可见的角色不可以通过fromfield或tofield找对对应的关联对象或被关联对象信息。irrevisible_roles表示不可以更改关联关系角色名单，在这个名单中的角色不可以设置关联关系。
+relationtpe表示关联关系类型，有4种关联关系</p> <ul><li>one2one，表示关联对象和被关联对象是一对一的关系</li> <li>one2many，表示关联对象和被关联对象是一对多的关系</li> <li>many2one，表示关联对象和被关联对象是多对1的关系</li> <li>many2many，表示关联对象和被关联对象是多对多的关系</li></ul> <p>只有one2one和one2many这两种关联关系可以设置ifcascade为true</p> <h2 id="relationsinschema-nestremove"><a href="#relationsinschema-nestremove" class="header-anchor">#</a> relationsInSchema_NestRemove</h2> <p>这个API是在Schema中删除关联关系用的，：</p> <ul><li>from_id，Schema的ID，必填要素。</li> <li>to_id,关联关系的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="relationfielddestroy"><a href="#relationfielddestroy" class="header-anchor">#</a> RelationFieldDestroy</h2> <p>这个API是按条件删除已经定义好的关联关系，它接收一个参数</p> <ul><li>where,RelationFieldWhereInput类型的字段，用以确定删除数据的范围。RelationFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input RelationFieldWhereInput  {
+  and: [RelationFieldWhereInput]
+  field_contains: [String]
+  filter: RelationFieldFieldFilter
+  not: RelationFieldWhereInput
+  or: [RelationFieldWhereInput]
+}
+input RelationFieldFieldFilter  {
+  fromfield: StringFilter
+  fromobject: StringFilter
+  id: IDFilter
+  ifcascade: BoolFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  relations: RelationFieldFieldFilter
+  relationtype: RelationType_EnumFilter
+  tofield: StringFilter
+  toobject: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="relationfieldupdate"><a href="#relationfieldupdate" class="header-anchor">#</a> RelationFieldUpdate</h2> <p>这个API是关联关系更新用的，它接收以下参数：</p> <ul><li>object，RelationFieldUpdateInput类型字段，表示需要更新的字段，RelationFieldUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。RelationFieldUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+input RelationFieldUpdateInput  {
+  fromfield: String
+  fromobject: String
+  ifcascade: Boolean
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  relationtype: RelationType
+  tofield: String
+  toobject: String
+}
+</code></pre></div><ul><li>where,RelationFieldWhereInput类型的字段，用以确定数据更新的范围。RelationFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input RelationFieldWhereInput  {
+  and: [RelationFieldWhereInput]
+  field_contains: [String]
+  filter: RelationFieldFieldFilter
+  not: RelationFieldWhereInput
+  or: [RelationFieldWhereInput]
+}
+input RelationFieldFieldFilter  {
+  fromfield: StringFilter
+  fromobject: StringFilter
+  id: IDFilter
+  ifcascade: BoolFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  relations: RelationFieldFieldFilter
+  relationtype: RelationType_EnumFilter
+  tofield: StringFilter
+  toobject: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="relationfield"><a href="#relationfield" class="header-anchor">#</a> RelationField</h2> <p>这个API用于根据ID查询关联关系，它接收一个参数：</p> <ul><li>id, 表示要查询的关联关系对象的ID。
+它返回一个参数，表示查询到的关联关系的具体内容，如果查询到的结果为空，则返回null。返回值的具体类型定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type RelationField   {
+  fromfield: String
+  fromobject: String
+  id: ID
+  ifcascade: Boolean
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  relationtype: RelationType
+  schemaid: Schema
+  tofield: String
+  toobject: String
+}
+</code></pre></div><p>在以上定义中，fromfield表示关联关系在关联对象中的字段名称，fromobject表示关联关系中关联对象的类型名称（注意是“名称”），toobject是关联关系中，被关联对象的字段名称，toobject表示关联关系中，被关联对象的对象名称,ifcascade表示是否级联删除，invisible_roles表示这个关联关系可以被哪些角色看见，不可见的角色不可以通过fromfield或tofield找对对应的关联对象或被关联对象信息。irrevisible_roles表示不可以更改关联关系角色名单，在这个名单中的角色不可以设置关联关系。
+relationtpe表示关联关系类型，有4种关联关系</p> <ul><li>one2one，表示关联对象和被关联对象是一对一的关系</li> <li>one2many，表示关联对象和被关联对象是一对多的关系</li> <li>many2one，表示关联对象和被关联对象是多对1的关系</li> <li>many2many，表示关联对象和被关联对象是多对多的关系</li></ul> <p>只有one2one和one2many这两种关联关系可以设置ifcascade为true</p> <h2 id="relationfieldmany"><a href="#relationfieldmany" class="header-anchor">#</a> RelationFieldMany</h2> <p>这个API用于根据条件查询关联关系，它接收的参数有：</p> <ul><li>where，RelationFieldWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input RelationFieldWhereInput  {
+  and: [RelationFieldWhereInput]
+  field_contains: [String]
+  filter: RelationFieldFieldFilter
+  not: RelationFieldWhereInput
+  or: [RelationFieldWhereInput]
+}
+input RelationFieldFieldFilter  {
+  fromfield: StringFilter
+  fromobject: StringFilter
+  id: IDFilter
+  ifcascade: BoolFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  relations: RelationFieldFieldFilter
+  relationtype: RelationType_EnumFilter
+  tofield: StringFilter
+  toobject: StringFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为RelationField的列表,RelationField的定义为：</p> <div class="language- extra-class"><pre class="language-text"><code>type RelationField   {
+  fromfield: String
+  fromobject: String
+  id: ID
+  ifcascade: Boolean
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  relationtype: RelationType
+  schemaid: Schema
+  tofield: String
+  toobject: String
+}
+</code></pre></div><p>在以上定义中，fromfield表示关联关系在关联对象中的字段名称，fromobject表示关联关系中关联对象的类型名称（注意是“名称”），toobject是关联关系中，被关联对象的字段名称，toobject表示关联关系中，被关联对象的对象名称,ifcascade表示是否级联删除，invisible_roles表示这个关联关系可以被哪些角色看见，不可见的角色不可以通过fromfield或tofield找对对应的关联对象或被关联对象信息。irrevisible_roles表示不可以更改关联关系角色名单，在这个名单中的角色不可以设置关联关系。
+relationtpe表示关联关系类型，有4种关联关系</p> <ul><li>one2one，表示关联对象和被关联对象是一对一的关系</li> <li>one2many，表示关联对象和被关联对象是一对多的关系</li> <li>many2one，表示关联对象和被关联对象是多对1的关系</li> <li>many2many，表示关联对象和被关联对象是多对多的关系</li></ul> <p>只有one2one和one2many这两种关联关系可以设置ifcascade为true</p> <h2 id="relationfieldlistener"><a href="#relationfieldlistener" class="header-anchor">#</a> RelationFieldListener</h2> <p>这是关联关系监听器，可以监听EasyGQL引擎中Schema中对象之间关联关系的变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input RelationField_FieldsMap  {
+ fromfield: Boolean = false
+ fromobject: Boolean = false
+ ifcascade: Boolean = false
+ invisible_roles: Boolean = false
+ irrevisible_roles: Boolean = false
+ relationtype: Boolean = false
+ schemaid: Boolean = false
+ tofield: Boolean = false
+ toobject: Boolean = false
+}
+
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,RelationFieldWhereInput型参数（具体使用方法同RelationFieldMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="scalarfieldsincontenttype-objectinput"><a href="#scalarfieldsincontenttype-objectinput" class="header-anchor">#</a> scalarfieldsInContentType_ObjectInput</h2> <p>这个API用于在ContentType对象类型中增加标量字段，它接收以下参数：</p> <ul><li>from_id，ContentType的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个ScalarFieldInput的类型的数组，因为scalarfields字段是数组，所以to_object可以为0到N个ScalarFieldInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建的标量字段ID列表。</li></ul> <p>ScalarFieldInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input ScalarFieldInput  {
+  defaultvalue: String
+  description: String = &quot;&quot;
+  id: ID
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  islist: Boolean = false
+  name: String!
+  notnull: Boolean = false
+  type: ScalarType!
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的标量类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个标量字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的标量字段信息，irrevisible_roles表示不可以更改标量字段的角色名单，在这个名单中的角色不可以修改标量字段，注意：不可以看见标量字段肯定不能修改标量字段。</p> <h2 id="scalarfieldsincontenttype-nestremove"><a href="#scalarfieldsincontenttype-nestremove" class="header-anchor">#</a> scalarfieldsInContentType_NestRemove</h2> <p>这个API是在ContentType中删除标量字段用的，：</p> <ul><li>from_id，ContentType的ID，必填要素。</li> <li>to_id,标量字段的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="scalarfieldupdate"><a href="#scalarfieldupdate" class="header-anchor">#</a> ScalarFieldUpdate</h2> <p>这个API是标量字段更新用的，它接收以下参数：</p> <ul><li>object,ScalarFieldUpdateInput类型字段，表示需要更新的字段，ScalarFieldUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。ScalarFieldUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ScalarFieldUpdateInput  {
+  defaultvalue: String
+  description: String
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  islist: Boolean
+  name: String
+  notnull: Boolean
+  type: ScalarType
+}
+
+</code></pre></div><ul><li>where,ScalarFieldWhereInput类型的字段，用以确定数据更新的范围。ScalarFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ScalarFieldWhereInput  {
+  and: [ScalarFieldWhereInput]
+  field_contains: [String]
+  filter: ScalarFieldFieldFilter
+  not: ScalarFieldWhereInput
+  or: [ScalarFieldWhereInput]
+}
+input ScalarFieldFieldFilter  {
+  defaultvalue: StringFilter
+  description: StringFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  notnull: BoolFilter
+  scalarfields: ScalarFieldFieldFilter
+  type: ScalarType_EnumFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="scalarfielddestroy"><a href="#scalarfielddestroy" class="header-anchor">#</a> ScalarFieldDestroy</h2> <p>这个API是按条件删除已经定义好的标量字段，它接收一个参数</p> <ul><li>where,ScalarFieldWhereInput类型的字段，用以确定删除数据的范围。ScalarFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ScalarFieldWhereInput  {
+  and: [ScalarFieldWhereInput]
+  field_contains: [String]
+  filter: ScalarFieldFieldFilter
+  not: ScalarFieldWhereInput
+  or: [ScalarFieldWhereInput]
+}
+input ScalarFieldFieldFilter  {
+  defaultvalue: StringFilter
+  description: StringFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  notnull: BoolFilter
+  scalarfields: ScalarFieldFieldFilter
+  type: ScalarType_EnumFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="scalarfield"><a href="#scalarfield" class="header-anchor">#</a> ScalarField</h2> <p>这个API用于根据ID查询标量字段，它接收一个参数：</p> <ul><li>id，表示要查询的标量字段的ID
+它返回一个ScalarField字段或null，ScalarField字段的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type ScalarField  {
+contenttype: ContentType
+defaultvalue: String
+description: String
+id: ID
+invisible_roles: [Role]
+irrevisible_roles: [Role]
+islist: Boolean
+name: String
+notnull: Boolean
+type: ScalarType
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的标量类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个标量字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的标量字段信息，irrevisible_roles表示不可以更改标量字段的角色名单，在这个名单中的角色不可以修改标量字段，注意：不可以看见标量字段肯定不能修改标量字段。</p> <h2 id="scalarfieldmany"><a href="#scalarfieldmany" class="header-anchor">#</a> ScalarFieldMany</h2> <p>这个API用于根据条件查询标量字段，它接收的参数有：</p> <ul><li>where，ScalarFieldWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ScalarFieldWhereInput  {
+  and: [ScalarFieldWhereInput]
+  field_contains: [String]
+  filter: ScalarFieldFieldFilter
+  not: ScalarFieldWhereInput
+  or: [ScalarFieldWhereInput]
+}
+input ScalarFieldFieldFilter  {
+  defaultvalue: StringFilter
+  description: StringFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  notnull: BoolFilter
+  scalarfields: ScalarFieldFieldFilter
+  type: ScalarType_EnumFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为ScalarField的列表,ScalarField的定义为：</p> <div class="language- extra-class"><pre class="language-text"><code>type ScalarField  {
+ contenttype: ContentType
+ defaultvalue: String
+ description: String
+ id: ID
+ invisible_roles: [Role]
+ irrevisible_roles: [Role]
+ islist: Boolean
+ name: String
+ notnull: Boolean
+ type: ScalarType
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的标量类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个标量字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的标量字段信息，irrevisible_roles表示不可以更改标量字段的角色名单，在这个名单中的角色不可以修改标量字段，注意：不可以看见标量字段肯定不能修改标量字段。</p> <h2 id="scalarfieldlistener"><a href="#scalarfieldlistener" class="header-anchor">#</a> ScalarFieldListener</h2> <p>这是标量字段监听器，可以监听EasyGQL引擎中Schema的标量字段变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input ScalarField_FieldsMap   {
+ contenttype: Boolean = false
+ defaultvalue: Boolean = false
+ description: Boolean = false
+ invisible_roles: Boolean = false
+ irrevisible_roles: Boolean = false
+ islist: Boolean = false
+ name: Boolean = false
+ notnull: Boolean = false
+ type: Boolean = false
+}
+
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,ScalarFieldWhereInput型参数（具体使用方法同ScalarFieldMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="enumfieldsincontenttype-objectinput"><a href="#enumfieldsincontenttype-objectinput" class="header-anchor">#</a> enumfieldsInContentType_ObjectInput</h2> <p>这个API用于在ContentType对象类型中增加枚举字段，它接收以下参数：</p> <ul><li>from_id，ContentType的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个EnumFieldInput的类型的数组，因为enumfields字段是数组，所以to_object可以为0到N个EnumFieldInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建的枚举字段ID列表。</li></ul> <p>EnumFieldInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input EnumFieldInput {
+  defaultvalue: Object
+  id: ID
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  islist: Boolean = false
+  name: String!
+  type: String!
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的枚举类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个枚举字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的枚举字段信息，irrevisible_roles表示不可以更改枚举字段的角色名单，在这个名单中的角色不可以修改枚举字段，注意：不可以看见枚举字段肯定不能修枚举量字段。</p> <h2 id="enumfieldsincontenttype-nestremove"><a href="#enumfieldsincontenttype-nestremove" class="header-anchor">#</a> enumfieldsInContentType_NestRemove</h2> <p>这个API是在ContentType中删除枚举字段用的，：</p> <ul><li>from_id，ContentType的ID，必填要素。</li> <li>to_id,枚举字段的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumfieldupdate"><a href="#enumfieldupdate" class="header-anchor">#</a> EnumFieldUpdate</h2> <p>这个API是枚举字段更新用的，它接收以下参数：</p> <ul><li>object,EnumFieldUpdateInput类型字段，表示需要更新的字段，EnumFieldUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。EnumFieldUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumFieldUpdateInput  {
+  defaultvalue: Object
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  islist: Boolean
+  name: String
+  type: String
+}
+</code></pre></div><ul><li>where,EnumFieldWhereInput类型的字段，用以确定数据更新的范围。EnumFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumFieldWhereInput  {
+  and: [EnumFieldWhereInput]
+  field_contains: [String]
+  filter: EnumFieldFieldFilter
+  not: EnumFieldWhereInput
+  or: [EnumFieldWhereInput]
+}
+input EnumFieldFieldFilter  {
+  defaultvalue: StringFilter
+  description: StringFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  notnull: BoolFilter
+  scalarfields: ScalarFieldFieldFilter
+  type: ScalarType_EnumFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumfielddestroy"><a href="#enumfielddestroy" class="header-anchor">#</a> EnumFieldDestroy</h2> <p>这个API是按条件删除已经定义好的枚举类型字段，它接收一个参数</p> <ul><li>where,EnumFieldWhereInput类型的字段，用以确定删除数据的范围。EnumFieldWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumFieldWhereInput  {
+  and: [EnumFieldWhereInput]
+  field_contains: [String]
+  filter: EnumFieldFieldFilter
+  not: EnumFieldWhereInput
+  or: [EnumFieldWhereInput]
+}
+input EnumFieldFieldFilter  {
+  enumfields: EnumFieldFieldFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  type: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="enumfield"><a href="#enumfield" class="header-anchor">#</a> EnumField</h2> <p>这个API是根据枚举类型字段的ID，查询枚举字段内容，它接收1个参数：</p> <ul><li>id,枚举字段的ID
+返回它返回一个EnumField字段或null，EnumField字段的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type EnumField  {
+ contenttype: ContentType
+ defaultvalue: Object
+ id: ID
+ invisible_roles: [Role]
+ irrevisible_roles: [Role]
+ islist: Boolean
+ name: String
+ type: String
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的枚举类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个枚举字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的枚举字段信息，irrevisible_roles表示不可以更改枚举字段的角色名单，在这个名单中的角色不可以修改枚举字段，注意：不可以看见枚举字段肯定不能修枚举量字段。</p> <h2 id="enumfieldmany"><a href="#enumfieldmany" class="header-anchor">#</a> EnumFieldMany</h2> <p>这个API用于根据条件查询枚举字段，它接收的参数有：</p> <ul><li>where，EnumFieldWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumFieldWhereInput  {
+  and: [EnumFieldWhereInput]
+  field_contains: [String]
+  filter: EnumFieldFieldFilter
+  not: EnumFieldWhereInput
+  or: [EnumFieldWhereInput]
+}
+input EnumFieldFieldFilter  {
+  enumfields: EnumFieldFieldFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  type: StringFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为EnumField的列表,EnumField的定义为：</p> <div class="language- extra-class"><pre class="language-text"><code> type EnumField  {
+  contenttype: ContentType
+  defaultvalue: Object
+  id: ID
+  invisible_roles: [Role]
+  irrevisible_roles: [Role]
+  islist: Boolean
+  name: String
+  type: String
+}
+</code></pre></div><p>在以上定义中，type表示标量字段对应的枚举类型，notnull表示该字段是否可以为空，islist 表示该字段是否可以为一个数组，invisible_roles表示这个枚举字段可以被哪些角色看见，不可见的角色通过查询语句找对对应的枚举字段信息，irrevisible_roles表示不可以更改枚举字段的角色名单，在这个名单中的角色不可以修改枚举字段，注意：不可以看见枚举字段肯定不能修枚举量字段。</p> <h2 id="enumfieldlistener"><a href="#enumfieldlistener" class="header-anchor">#</a> EnumFieldListener</h2> <p>这是枚举字段监听器，可以监听EasyGQL引擎中Schema的枚举字段变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input EnumField_FieldsMap  {
+ contenttype: Boolean = false
+ defaultvalue: Boolean = false
+ invisible_roles: Boolean = false
+ irrevisible_roles: Boolean = false
+ islist: Boolean = false
+ name: Boolean = false
+ type: Boolean = false
+}
+
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,EnumFieldWhereInput型参数（具体使用方法同ScalarFieldMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值</li></ul> <h2 id="triggersinschema-objectinput"><a href="#triggersinschema-objectinput" class="header-anchor">#</a> triggersInSchema_ObjectInput</h2> <p>这个API用于在Schema中为各个ContenType类型的对象中增加触发器，当具体对象类型的对应数据对象发生变化时，会调用外部的Restful API,达到和外部API集成的目的，它接收以下参数：</p> <ul><li>from_id，Schema的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个TriggerInput的类型的数组，因为trigggers字段是数组，所以to_object可以为0到N个TriggerInput对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建的触发器的ID列表。</li></ul> <p>TriggerInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input TriggerInput  {
+  description: String = &quot;&quot;
+  eventtype: [Event]
+  expiredate: Date!
+  headers: Object
+  id: ID
+  name: String!
+  ok_status: String = &quot;200&quot;
+  payloadargs: [String]
+  payloadformatter: String
+  retry_times: Int = 3
+  startdate: Date!
+  typename: String!
+  webhookurl: String!
+}
+</code></pre></div><p>在以上定义中</p> <ul><li>eventtype表示触发器触发的事件时什么，可以为insert、update、delete的组合。</li> <li>expirdate表示触发器对应配置的失效时间</li> <li>startdate表示触发器对应配置的生效时间</li> <li>headers表示触发器对应文件头的一个对象，实际在使用的时候，可以理解为一个JSON的键值对</li> <li>id,为自定义的ID</li> <li>name,表示触发器的名字</li> <li>ok_status,表示判断RestAPI 调用成功的标识状态码</li> <li>payloadargs，是一个数组，数组中的字段为对应ContentType对象的属性字段名，和payloadformater中的变量相对应。</li> <li>payloadformater，是RestAPI对应payload的字符串表示，payloadformater的格式对应为Stringformater的格式</li> <li>retry_times表示失败重试次数</li> <li>typename表示对应ContentType的名字</li> <li>webhookurl，表示对应RestAPI的地址。</li></ul> <h2 id="triggersinschema-nestremove"><a href="#triggersinschema-nestremove" class="header-anchor">#</a> triggersInSchema_NestRemove</h2> <p>这个API是在Schema中删除触发器用的，：</p> <ul><li>from_id，Schema的ID，必填要素。</li> <li>to_id,触发器的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="triggerupdate"><a href="#triggerupdate" class="header-anchor">#</a> TriggerUpdate</h2> <p>这个API用于更新触发器
+这个API是枚举字段更新用的，它接收以下参数：</p> <ul><li>object,TriggerUpdateInput类型字段，表示需要更新的字段，TriggerUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。TriggerUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input TriggerUpdateInput{
+  description: String
+  eventtype: [Event]
+  expiredate: Date
+  headers: Object
+  name: String
+  ok_status: String
+  payloadargs: [String]
+  payloadformatter: String
+  retry_times: Int
+  startdate: Date
+  typename: String
+  webhookurl: String
+}
+</code></pre></div><ul><li>where,TriggerWhereInput类型的字段，用以确定数据更新的范围。TriggerWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input TriggerWhereInput   {
+  and: [TriggerWhereInput]
+  field_contains: [String]
+  filter: TriggerFieldFilter
+  not: TriggerWhereInput
+  or: [TriggerWhereInput]
+}
+input TriggerFieldFilter  {
+  description: StringFilter
+  eventtype: Event_EnumListFilter
+  expiredate: StringFilter
+  id: IDFilter
+  name: StringFilter
+  ok_status: StringFilter
+  payloadargs: StringListWhereInput
+  payloadformatter: StringFilter
+  retry_times: IntFilter
+  startdate: StringFilter
+  triggers: TriggerFieldFilter
+  typename: StringFilter
+  webhookurl: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="triggerdestroy"><a href="#triggerdestroy" class="header-anchor">#</a> TriggerDestroy</h2> <p>这个API是按条件删除已经定义好的触发器，它接收一个参数</p> <ul><li>where,TriggerWhereInput类型的字段，用以确定删除数据的范围。TriggerWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input TriggerWhereInput   {
+  and: [TriggerWhereInput]
+  field_contains: [String]
+  filter: TriggerFieldFilter
+  not: TriggerWhereInput
+  or: [TriggerWhereInput]
+}
+input TriggerFieldFilter  {
+  description: StringFilter
+  eventtype: Event_EnumListFilter
+  expiredate: StringFilter
+  id: IDFilter
+  name: StringFilter
+  ok_status: StringFilter
+  payloadargs: StringListWhereInput
+  payloadformatter: StringFilter
+  retry_times: IntFilter
+  startdate: StringFilter
+  triggers: TriggerFieldFilter
+  typename: StringFilter
+  webhookurl: StringFilter
+}
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="trigger"><a href="#trigger" class="header-anchor">#</a> Trigger</h2> <p>根据ID查询Trigger的API，它接收1个参数：</p> <ul><li>id，触发器的ID
+返回它返回一个Trigger对象或null，Triggr字段的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>type Trigger  {
+ description: String
+ eventtype: [Event]
+ expiredate: Date
+ headers: Object
+ id: ID
+ name: String
+ ok_status: String
+ payloadargs: [String]
+ payloadformatter: String
+ retry_times: Int
+ schemaid: Schema
+ startdate: Date
+ typename: String
+ webhookurl: String
+}
+</code></pre></div><p>在以上定义中</p> <ul><li>eventtype表示触发器触发的事件时什么，可以为insert、update、delete的组合。</li> <li>expirdate表示触发器对应配置的失效时间</li> <li>startdate表示触发器对应配置的生效时间</li> <li>headers表示触发器对应文件头的一个对象，实际在使用的时候，可以理解为一个JSON的键值对</li> <li>id,为自定义的ID</li> <li>name,表示触发器的名字</li> <li>ok_status,表示判断RestAPI 调用成功的标识状态码</li> <li>payloadargs，是一个数组，数组中的字段为对应ContentType对象的属性字段名，和payloadformater中的变量相对应。</li> <li>payloadformater，是RestAPI对应payload的字符串表示，payloadformater的格式对应为Stringformater的格式</li> <li>retry_times表示失败重试次数</li> <li>typename表示对应ContentType的名字</li> <li>webhookurl，表示对应RestAPI的地址。</li> <li>schemaid，表示触发器所属Schema</li></ul> <h2 id="triggermany"><a href="#triggermany" class="header-anchor">#</a> TriggerMany</h2> <p>这个API用于根据条件查询触发器，它接收的参数有：</p> <ul><li>where，TriggerWhereInput的参数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input TriggerWhereInput  {
+  and: [EnumFieldWhereInput]
+  field_contains: [String]
+  filter: EnumFieldFieldFilter
+  not: EnumFieldWhereInput
+  or: [EnumFieldWhereInput]
+}
+input TriggerFieldFieldFilter  {
+  enumfields: EnumFieldFieldFilter
+  id: IDFilter
+  invisible_roles: Role_EnumListFilter
+  irrevisible_roles: Role_EnumListFilter
+  islist: BoolFilter
+  name: StringFilter
+  type: StringFilter
+}
+</code></pre></div><ul><li>orderby,一个String字符串，支持多字段排序，可以支持排序的字段类型为提供了比较操作符的标量类型字段，格式为&quot;字段1，字段2，desc|asc&quot;。</li> <li>limit,返回的记录条数</li> <li>skip，跳过前多少条</li></ul> <p>返回值为Trigger的列表,Trigger的定义为：</p> <div class="language- extra-class"><pre class="language-text"><code>type Trigger  {
+  description: String
+  eventtype: [Event]
+  expiredate: Date
+  headers: Object
+  id: ID
+  name: String
+  ok_status: String
+  payloadargs: [String]
+  payloadformatter: String
+  retry_times: Int
+  schemaid: Schema
+  startdate: Date
+  typename: String
+  webhookurl: String
+}
+</code></pre></div><p>在以上定义中</p> <ul><li>eventtype表示触发器触发的事件时什么，可以为insert、update、delete的组合。</li> <li>expirdate表示触发器对应配置的失效时间</li> <li>startdate表示触发器对应配置的生效时间</li> <li>headers表示触发器对应文件头的一个对象，实际在使用的时候，可以理解为一个JSON的键值对</li> <li>id,为自定义的ID</li> <li>name,表示触发器的名字</li> <li>ok_status,表示判断RestAPI 调用成功的标识状态码</li> <li>payloadargs，是一个数组，数组中的字段为对应ContentType对象的属性字段名，和payloadformater中的变量相对应。</li> <li>payloadformater，是RestAPI对应payload的字符串表示，payloadformater的格式对应为Stringformater的格式</li> <li>retry_times表示失败重试次数</li> <li>typename表示对应ContentType的名字</li> <li>webhookurl，表示对应RestAPI的地址。</li> <li>schemaid，表示触发器所属Schema</li></ul> <h2 id="triggerlistener"><a href="#triggerlistener" class="header-anchor">#</a> TriggerListener</h2> <p>这是触发器监听器，可以监听EasyGQL引擎中Schema的触发器，它接收三个参数：</p> <ul><li>select,select是一个map型的参数,具体定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input Trigger_FieldsMap  {
+ description: Boolean = false
+ eventtype: Boolean = false
+ expiredate: Boolean = false
+ headers: Boolean = false
+ name: Boolean = false
+ ok_status: Boolean = false
+ payloadargs: Boolean = false
+ payloadformatter: Boolean = false
+ retry_times: Boolean = false
+ schemaid: Boolean = false
+ startdate: Boolean = false
+ typename: Boolean = false
+ webhookurl: Boolean = false
+}
+</code></pre></div><p>在select中，必须有一个字段为true</p> <ul><li>watch，watch和select一样时一个map型参数，定义同select定义。</li> <li>where,TriggerWhereInput型参数（具体使用方法同TriggerMany），表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值。</li></ul> <h2 id="unique-constraintsincontenttype-objectinput"><a href="#unique-constraintsincontenttype-objectinput" class="header-anchor">#</a> unique_constraintsInContentType_ObjectInput</h2> <p>这个API用于在ContetnType类型中为添加唯一索引，它接收以下参数：</p> <ul><li>from_id，Contetnt的ID，必填要素</li> <li>reset,true或者false表示是否重置，默认为false</li> <li>to_object,一个UniqueConstraint的类型的数组，因为unique_constraints字段是数组，所以to_object可以为0到N个UniqueConstraint对象。
+这个API的返回值有：</li> <li>inputNestIDList，表示新创建的唯一索引的ID列表。</li></ul> <p>TriggerInput这个字段的定义如下:</p> <div class="language- extra-class"><pre class="language-text"><code>input UniqueConstraintInput  {
+  fields: [String]
+  id: ID
+}
+</code></pre></div><p>在以上定义中</p> <ul><li>fields，表示唯一索引字段的列表，可以包含关联关系字段。</li></ul> <h2 id="unique-constraintsincontenttype-nestremove"><a href="#unique-constraintsincontenttype-nestremove" class="header-anchor">#</a> unique_constraintsInContentType_NestRemove</h2> <p>这个API是在ContentType中删除唯一索引用的，：</p> <ul><li>from_id，ContentType的ID，必填要素。</li> <li>to_id,唯一索引的ID列表。
+这个API的返回值有：</li> <li>affected_rows，表示受影响的行数。</li></ul> <h2 id="uniqueconstraintupdate"><a href="#uniqueconstraintupdate" class="header-anchor">#</a> UniqueConstraintUpdate</h2> <p>这个API用于更新唯一索引，它接收以下参数：</p> <ul><li>object,UniqueConstraintUpdateInput类型字段，表示需要更新的字段，UniqueConstraintUpdateInput的所有属性都是非必填的，仅对输入的要输进行更新。UniqueConstraintUpdateInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input UniqueConstraintUpdateInput {
+  fields: [String]
+}
+</code></pre></div><ul><li>where,UniqueConstraintWhereInput类型的字段，用以确定数据更新的范围。UniqueConstraintWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input UniqueConstraintWhereInput  {
+  and: [UniqueConstraintWhereInput]
+  field_contains: [String]
+  filter: UniqueConstraintFieldFilter
+  not: UniqueConstraintWhereInput
+  or: [UniqueConstraintWhereInput]
+}
+input UniqueConstraintFieldFilter {
+  fields: StringListWhereInput
+  id: IDFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="uniqueconstraintdestroy"><a href="#uniqueconstraintdestroy" class="header-anchor">#</a> UniqueConstraintDestroy</h2> <p>这个API是按条件删除已经定义好的唯一索引，它接收一个参数</p> <ul><li>where,UniqueConstraintWhereInput类型的字段，用以确定删除数据的范围。UniqueConstraintWhereInput的定义如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>input UniqueConstraintWhereInput  {
+  and: [UniqueConstraintWhereInput]
+  field_contains: [String]
+  filter: UniqueConstraintFieldFilter
+  not: UniqueConstraintWhereInput
+  or: [UniqueConstraintWhereInput]
+}
+input UniqueConstraintFieldFilter {
+  fields: StringListWhereInput
+  id: IDFilter
+}
+
+</code></pre></div><p>它返回一个参数：</p> <ul><li>affected_rows，表示受影响的行数。</li></ul> <h2 id="uniqueconstraintlistener"><a href="#uniqueconstraintlistener" class="header-anchor">#</a> UniqueConstraintListener</h2> <p>这是唯一索引监听器，可以监听EasyGQL引擎中Schema的唯一索引变化，它接收三个参数：</p> <ul><li>select,select是一个map型的参数，{contenttype：true|fasle,fields:true|false}，在select中，必须有一个字段为true</li> <li>watch，watch和select一样时一个map型参数，{contenttype：true|fasle,fields:true|false}，在watch中，必须有一个字段为true。</li> <li>where,UniqueConstraintWhereInput型参数，表示监听数据的范围。
+返回值有三个部分：</li> <li>action： insert、update、delete。</li> <li>old_val: 变更之前的值</li> <li>new_val: 变更之后的值。</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/doc/assets/js/app.b791fc28.js" defer></script><script src="/doc/assets/js/2.93ca64ef.js" defer></script><script src="/doc/assets/js/8.4592f1b4.js" defer></script>
+  </body>
+</html>
